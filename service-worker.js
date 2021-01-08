@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/axxonsoft-virtual-booth/precache-manifest.d112c2f31ee98b0fc87335bc195b433b.js"
+  "/axxonsoft-virtual-booth/precache-manifest.d752ee331cb744f06cb37bcc05ab3f82.js"
 );
 
 self.addEventListener('message', (event) => {
