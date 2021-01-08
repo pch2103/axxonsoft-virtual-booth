@@ -7,7 +7,7 @@ import MonitorWP from "./MonitorWP";
 
 export default function Model(props) {
   const group = useRef()
-  const { nodes, materials } = useGLTF('./virtualWP.glb')
+  const { nodes, materials } = useGLTF('../../../virtualWP.glb')
   return (
     <group ref={group} {...props} dispose={null}>
       <MonitorWP position={[0, 1.2, 0.06]} texture='/screen.png'/>
@@ -27,4 +27,4 @@ export default function Model(props) {
   )
 }
 
-useGLTF.preload('/virtualWP.glb')
+useGLTF.preload('../../../virtualWP.glb')
