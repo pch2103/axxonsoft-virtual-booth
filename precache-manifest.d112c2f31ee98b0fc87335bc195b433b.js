@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fb83e42db377b2300e15aa54064f19ce",
+    "revision": "723c6f91b3445a58248ae97f2471b07e",
     "url": "/axxonsoft-virtual-booth/index.html"
   },
   {
-    "revision": "fd038061a74b1eb8fe36",
+    "revision": "e4f103162a6c287a271b",
     "url": "/axxonsoft-virtual-booth/static/css/main.2d4a66a9.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/axxonsoft-virtual-booth/static/js/3.e04c41b5.chunk.js"
   },
   {
-    "revision": "fd038061a74b1eb8fe36",
-    "url": "/axxonsoft-virtual-booth/static/js/main.09c2c6d7.chunk.js"
+    "revision": "e4f103162a6c287a271b",
+    "url": "/axxonsoft-virtual-booth/static/js/main.7f53a95d.chunk.js"
   },
   {
     "revision": "3c0c5585e32514a73770",
