@@ -12,7 +12,10 @@ body,
 }
 
 body {
-  background: linear-gradient(#353A48, #ABADBE);
   overflow: hidden;
   margin: 0;
+}
+
+.canvas {
+  background: linear-gradient(#353A48, #ABADBE);
 }
