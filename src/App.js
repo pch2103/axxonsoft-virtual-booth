@@ -3,12 +3,11 @@ import React, {Suspense} from "react";
 import "./assets/styles/App.scss";
 
 import {Canvas} from "react-three-fiber";
-import {Loader, OrbitControls, softShadows} from "@react-three/drei";
+import {Loader, OrbitControls} from "@react-three/drei";
 import Lights from "./components/Three/lights";
 import Model from "./components/Three/VirtualWP";
 import Floor from "./components/Three/Floor";
 
-// softShadows()
 
 const App = () => {
 
