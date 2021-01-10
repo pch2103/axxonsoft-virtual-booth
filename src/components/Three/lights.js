@@ -3,7 +3,7 @@ import React from 'react';
 function Lights(props) {
 	return (
 			<>
-				<fog attach={'fog'} args={['#717484', 4, 70]}/>
+				{/*<fog attach={'fog'} args={['#717484', 4, 70]}/>*/}
 				<ambientLight intensity={0.3}/>
 				<directionalLight
 						castShadow
