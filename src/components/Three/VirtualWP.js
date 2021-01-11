@@ -13,11 +13,13 @@ export default function VirtualWP(props) {
 	return (
 			<group ref={ref} {...props} dispose={null}>
 				<MonitorWP
+						info = {props.info}
 						title={"AxxonSoft Webinars"}
 						text={"Watch Video"}
 						position={[0, 1.19, 0.05]}
 						texture='/screen.png'/>
 				<MonitorWP
+						info = {props.info}
 						title={"Build your own VSaaS"}
 						text={"Click to Watch Video"}
 						position={[0, 1.19, -0.05]}

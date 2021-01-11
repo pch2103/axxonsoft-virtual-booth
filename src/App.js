@@ -6,11 +6,14 @@ import {Loader, OrbitControls, softShadows} from "@react-three/drei";
 import Lights from "./components/Three/lights";
 import VirtualWP from "./components/Three/VirtualWP";
 import Floor from "./components/Three/Floor";
+import Info from "./info/Info";
+import {useInfo} from "./info/useInfo";
 
-softShadows()
+softShadows(undefined)
 
 const App = () => {
-
+  const info = useInfo()
+  console.log('APP', info)
   return (
     <>
       <Canvas
@@ -36,10 +39,11 @@ const App = () => {
       />
         <Lights />
         <Suspense fallback={null}>
-          <VirtualWP position = {[0, -1, 0]}/>
+          <VirtualWP position = {[0, -1, 0]} info={info}/>
           <Floor />
         </Suspense>
       </Canvas>
+      <Info info={info}/>
       <Loader />
     </>
   );
