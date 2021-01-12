@@ -1,4 +1,4 @@
-import React, {Suspense} from "react";
+import React from "react";
 //Styles
 import "./assets/styles/App.scss";
 import {Canvas} from "react-three-fiber";
@@ -13,7 +13,7 @@ softShadows(undefined)
 
 const App = () => {
   const info = useInfo()
-  console.log('APP', info)
+
   return (
     <>
       <Canvas
@@ -38,10 +38,8 @@ const App = () => {
         maxDistance={1000}
       />
         <Lights />
-        <Suspense fallback={null}>
-          <VirtualWP position = {[0, -1, 0]} info={info}/>
-          <Floor />
-        </Suspense>
+        <VirtualWP position = {[0, -1, 0]} info={info}/>
+        <Floor />
       </Canvas>
       <Info info={info}/>
       <Loader />

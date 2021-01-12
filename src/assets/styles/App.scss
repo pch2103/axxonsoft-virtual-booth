@@ -25,6 +25,7 @@ body,
 
 .infoPanel {
   z-index: 99;
+  font-size: 0.9em;
   position: fixed;
   display: flex;
   justify-content: center;
@@ -38,20 +39,4 @@ body,
   top: 0;
 }
 
-.content {
-  z-index: 99;
-  transform: translate3d(100%, -50%, 0);
-  color: rgba(255, 255, 255, 0.9);
-  text-align: left;
-  display: inline-block;
-  white-space: nowrap;
-  padding: 12px;
-  border-radius: 6px;
-  background: rgba(0, 0, 0, 0.4);
-
-  span {
-    font-size: 0.8em;
-    color: #02B1FF;
-  }
-}
 
