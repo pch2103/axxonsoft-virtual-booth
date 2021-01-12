@@ -1,6 +1,7 @@
 import {useState} from 'react';
+import dataInfo from '../components/data/dataInfo'
 
-export const useInfo = (defaultValue = 'Info default value') => {
+export const useInfo = (defaultValue = dataInfo.default) => {
 	const [info, setInfo] = useState(defaultValue)
 
 	const setInfoWrapper = (value) => {
@@ -9,5 +10,6 @@ export const useInfo = (defaultValue = 'Info default value') => {
 	}
 	return {infoText: info, setInfo: setInfoWrapper}
 }
+
 
 

@@ -1,25 +1,24 @@
-import React, {useState} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import {TextureLoader} from 'three'
 import {useLoader} from 'react-three-fiber'
-import * as THREE from "three";
-import {Html} from "@react-three/drei";
-
-const materialDefault = new THREE.MeshPhongMaterial({
-	color: 0x0A0A0A,
-})
-const materialHover = new THREE.MeshPhongMaterial({
-	color: 0x008AE0,
-})
+import dataInfo from '../data/dataInfo'
+import {monitorMaterial} from '../data/monitorMaterial'
 
 export default function MonitorWP(props) {
+	const ref = useRef(null);
 	const texture_1 = useLoader(TextureLoader, props.texture);
 	const [hovered, setHover] = useState(false)
 	const {info, setInfo} = props.info;
 
+	useEffect(() => {
+		props.monitors.setMonitors({screen: props.screen, ref})
+		// eslint-disable-next-line
+	},[])
+
 	const PointerOver = e => {
 		e.stopPropagation()
 		setHover(true)
-		if (info !== props.title) setInfo(props.title)
+		if (dataInfo[props.screen] !== info) setInfo(dataInfo[props.screen])
 	}
 	const PointerOut = e => {
 		e.stopPropagation()
@@ -27,22 +26,20 @@ export default function MonitorWP(props) {
 		setInfo()
 	}
 
+	const PointerClick = e => {
+		e.stopPropagation()
+		props.monitors.setActive(!props.monitors.active, props.screen)
+	}
+
 	return (
-			<>
-				<mesh {...props} onPointerOver={PointerOver} onPointerOut={PointerOut}>
+			<group ref = {ref}>
+				<mesh {...props} onPointerOver={PointerOver} onPointerOut={PointerOut} onClick={PointerClick}>
 					<boxBufferGeometry attach="geometry" args={[0.61, 0.35, 0.015]}/>
 					<meshStandardMaterial attach="material" map={texture_1}/>
-					<Html scaleFactor={3} style={{ pointerEvents: "auto", display: hovered ? "block" : "none" }}>
-						<div className="content">
-							<strong>{props.title}</strong><br/>
-							<span>{props.text}</span>
-						</div>
-					</Html>
 				</mesh>
-				<mesh {...props} material={hovered ? materialHover : materialDefault}>
+				<mesh {...props} material={ props.monitors.isActive(props.screen) && monitorMaterial.selected || hovered ? monitorMaterial.hovered : monitorMaterial.default}>
 					<boxBufferGeometry attach="geometry" args={[0.63, 0.37, 0.012]}/>
 				</mesh>
-
-			</>
+			</group>
 	);
 }
