@@ -1,57 +1,43 @@
 import React, {useEffect, useRef, useState} from 'react'
 import {TextureLoader} from 'three'
 import {useLoader} from 'react-three-fiber'
-import * as THREE from "three";
-import InfoData from '../../info/Data/InfoData'
-
-const materialDefault = new THREE.MeshPhongMaterial({
-	color: 0x0A0A0A,
-})
-const materialHover = new THREE.MeshPhongMaterial({
-	color: 0x005FA8,
-})
-const materialSelected = new THREE.MeshPhongMaterial({
-	color: 0xA50022,
-})
+import dataInfo from '../data/dataInfo'
+import {monitorMaterial} from '../data/monitorMaterial'
 
 export default function MonitorWP(props) {
 	const ref = useRef(null);
 	const texture_1 = useLoader(TextureLoader, props.texture);
 	const [hovered, setHover] = useState(false)
-	const [selected, setSelected] = useState(false)
-	const {info, setInfo, setMonitors} = props.info;
+	const {info, setInfo} = props.info;
+
+	useEffect(() => {
+		props.monitors.setMonitors({screen: props.screen, ref})
+		// eslint-disable-next-line
+	},[])
 
 	const PointerOver = e => {
 		e.stopPropagation()
 		setHover(true)
-		if (info !== InfoData[props.screen]) setInfo(InfoData[props.screen])
+		if (dataInfo[props.screen] !== info) setInfo(dataInfo[props.screen])
 	}
 	const PointerOut = e => {
 		e.stopPropagation()
 		setHover(false)
 		setInfo()
 	}
+
 	const PointerClick = e => {
 		e.stopPropagation()
-		setSelected(!selected)
-	}
-
-	useEffect(()=>{
-		setMonitors(props.screen)
-		// console.log("Monitor", props.screen)
-	},[])
-
-	const useMaterial = () => {
-		return (selected && materialSelected) || (hovered && materialHover) || materialDefault
+		props.monitors.setActive(!props.monitors.active, props.screen)
 	}
 
 	return (
-			<group ref={ref}>
+			<group ref = {ref}>
 				<mesh {...props} onPointerOver={PointerOver} onPointerOut={PointerOut} onClick={PointerClick}>
 					<boxBufferGeometry attach="geometry" args={[0.61, 0.35, 0.015]}/>
 					<meshStandardMaterial attach="material" map={texture_1}/>
 				</mesh>
-				<mesh ref={ref} {...props} material={useMaterial()}>
+				<mesh {...props} material={ props.monitors.isActive(props.screen) && monitorMaterial.selected || hovered ? monitorMaterial.hovered : monitorMaterial.default}>
 					<boxBufferGeometry attach="geometry" args={[0.63, 0.37, 0.012]}/>
 				</mesh>
 			</group>
