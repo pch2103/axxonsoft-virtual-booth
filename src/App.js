@@ -13,7 +13,7 @@ softShadows(undefined)
 
 const App = () => {
 	const info = useInfo()
-	const monitors = useMonitors(undefined)
+	const monitors = useMonitors()
 	return (
 			<>
 				<Canvas
@@ -42,7 +42,7 @@ const App = () => {
 					<VirtualWP position={[0, 0, 0]} info={info} monitors={monitors}/>
 					<Floor/>
 				</Canvas>
-				<Info info={info}/>
+				<Info info={info} monitors={monitors}/>
 				<Loader/>
 			</>
 	);

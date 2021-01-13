@@ -1,15 +1,13 @@
 import React, {useEffect, useRef, useState} from 'react'
 import {TextureLoader} from 'three'
 import {useLoader} from 'react-three-fiber'
-import dataInfo from '../data/dataInfo'
+import infoData from '../data/infoData'
 import {monitorMaterial} from '../data/monitorMaterial'
 
 export default function MonitorWP(props) {
 	const ref = useRef(null);
 	const texture_1 = useLoader(TextureLoader, props.texture);
 	const [hovered, setHover] = useState(false)
-	const [active, setActive] = useState(false);
-	const {info, setInfo} = props.info;
 
 	useEffect(() => {
 		props.monitors.setMonitors({screenId: props.screenId, ref})
@@ -19,18 +17,18 @@ export default function MonitorWP(props) {
 	const PointerOver = e => {
 		e.stopPropagation()
 		setHover(true)
-		if (dataInfo[props.screenId] !== info) setInfo(dataInfo[props.screenId])
+		if (infoData[props.screenId] !== props.info.infoText) props.info.setInfoText(infoData[props.screenId])
 	}
 	const PointerOut = e => {
 		e.stopPropagation()
 		setHover(false)
-		setInfo()
+		props.info.setInfoText(null)
 	}
 
 	const PointerClick = e => {
 		e.stopPropagation()
-		setActive(!active)
 		props.monitors.setActive(props.screenId)
+		props.info.setSelectedText(infoData[props.screenId])
 	}
 
 	return (
@@ -43,9 +41,9 @@ export default function MonitorWP(props) {
 					<boxBufferGeometry attach="geometry" args={[0.63, 0.37, 0.012]}/>
 				</mesh>
 				{ hovered &&
-					<mesh {...props} material={monitorMaterial.hovered}>
-						<boxBufferGeometry attach="geometry" args={[0.64, 0.38, 0.010]}/>
-					</mesh>
+				<mesh {...props} material={monitorMaterial.hovered}>
+					<boxBufferGeometry attach="geometry" args={[0.65, 0.39, 0.010]}/>
+				</mesh>
 				}
 			</group>
 	);
