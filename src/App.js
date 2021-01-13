@@ -10,6 +10,7 @@ import {useInfo} from "./hooks/useInfo";
 import {useMonitors} from "./hooks/useMonitors";
 
 softShadows(undefined)
+
 const App = () => {
 	const info = useInfo()
 	const monitors = useMonitors(undefined)
@@ -20,10 +21,11 @@ const App = () => {
 						invalidateFrameloop
 						colorManagement
 						shadowMap
-						camera={{position: [5, 4, 3], fov: 20}}
+						camera={{position: [5, 4, 4], near: 1, fov: 20}}
 				>
 					<OrbitControls
 							enableDamping={true}
+							target={[0, 1, 0]}
 							dampingFactor={0.25}
 							rotateSpeed={0.4}
 							keyPanSpeed={0.4}
@@ -37,7 +39,7 @@ const App = () => {
 							maxDistance={1000}
 					/>
 					<Lights/>
-					<VirtualWP position={[0, -1, 0]} info={info} monitors={monitors}/>
+					<VirtualWP position={[0, 0, 0]} info={info} monitors={monitors}/>
 					<Floor/>
 				</Canvas>
 				<Info info={info}/>

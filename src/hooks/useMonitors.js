@@ -1,28 +1,35 @@
 import {useState} from "react";
+import {monitorMaterial} from '../components/data/monitorMaterial'
 
 export const useMonitors = () => {
 	const [monitors,] = useState([]);
-	const [active, setActive] = useState(false)
+	// const [active, setActive] = useState(false)
 
-	const setActiveWrapper = (active, screen) => {
-		setActive (active)
+	const setActive = (screenId) => {
+
 		monitors.forEach(m => {
-			if(m.screen === screen) m.active = active
+			if (m.screenId === screenId) {
+				if (!m.active) m.ref.current.children[1].material = monitorMaterial.selected
+				m.active = true
+			} else {
+				if (m.active) m.ref.current.children[1].material = monitorMaterial.default
+				m.active = false
+			}
 		})
 	}
 
-	const isActive = (screen) => {
+	const isActive = (screenId) => {
 		monitors.forEach(m => {
-			if(m.screen === screen) return m.active //console.log('SCREEN', m.screen, m.active)
+			if(m.screenId === screenId)  console.log('isActive', m.screenId, m.active)
 		})
 
 		return false
 	}
 
-	const setMonitors = ({screen, ref}) => {
-		if (ref) monitors.push({ screen, ref, active })
+	const setMonitors = ({screenId, ref, active=false}) => {
+		if (ref) monitors.push({ screenId, ref, active })
 	}
 
-	return {monitors, setMonitors, setActive: setActiveWrapper, active, isActive}
+	return {monitors, setMonitors, setActive, isActive}
 }
 

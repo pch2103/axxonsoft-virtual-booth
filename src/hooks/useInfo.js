@@ -6,7 +6,7 @@ export const useInfo = (defaultValue = dataInfo.default) => {
 
 	const setInfoWrapper = (value) => {
 		setInfo(value);
-		if(!value) setInfo('Info default value');
+		if(!value) setInfo(defaultValue);
 	}
 	return {infoText: info, setInfo: setInfoWrapper}
 }
