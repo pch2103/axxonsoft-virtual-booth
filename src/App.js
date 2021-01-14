@@ -3,17 +3,17 @@ import "./assets/styles/App.scss";
 import {Canvas} from "react-three-fiber";
 import {Loader, OrbitControls, softShadows} from "@react-three/drei";
 import Lights from "./components/Three/lights";
-import VirtualWP from "./components/Three/VirtualWP";
 import Floor from "./components/Three/Floor";
 import Info from "./components/Info";
 import {useInfo} from "./hooks/useInfo";
-import {useMonitors} from "./hooks/useMonitors";
+import {useMonitorState} from "./hooks/useMonitorState";
+import BuildWP from "./components/BuildWP";
 
 softShadows(undefined)
 
 const App = () => {
 	const info = useInfo()
-	const monitors = useMonitors()
+	const monitorState = useMonitorState()
 	return (
 			<>
 				<Canvas
@@ -21,7 +21,7 @@ const App = () => {
 						invalidateFrameloop
 						colorManagement
 						shadowMap
-						camera={{position: [5, 4, 4], near: 1, fov: 20}}
+						camera={{position: [5, 3, 5], near: 1, fov: 25}}
 				>
 					<OrbitControls
 							enableDamping={true}
@@ -39,10 +39,10 @@ const App = () => {
 							maxDistance={1000}
 					/>
 					<Lights/>
-					<VirtualWP position={[0, 0, 0]} info={info} monitors={monitors}/>
+					<BuildWP info={info} monitorState={monitorState}/>
 					<Floor/>
 				</Canvas>
-				<Info info={info} monitors={monitors}/>
+				<Info info={info} monitorState={monitorState}/>
 				<Loader/>
 			</>
 	);

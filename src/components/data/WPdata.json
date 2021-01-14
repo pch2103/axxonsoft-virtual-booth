@@ -1,0 +1,64 @@
+[
+  {
+    "name": "WP-1",
+    "type": "simple",
+    "position": [0.5, 0, 0.5],
+    "monitor": [
+      {
+        "screenId": "screen1",
+        "position": [0, 1.19, 0.05],
+        "texture": "screen.png"
+      },
+      {
+        "screenId": "screen2",
+        "position": [0, 1.19, -0.05],
+        "texture": "screen_net.png"
+      }
+    ],
+    "poster": [
+      {
+        "posterId": "poster1",
+        "position": [0, 1.4, 0.04],
+        "size": [0.685, 1.2, 0.001],
+        "texture": "poster_webinar.png"
+      },
+      {
+        "posterId": "poster2",
+        "position": [0, 1.4, -0.04],
+        "size": [0.685, 1.2, 0.001],
+        "texture": "poster_net.png"
+      }
+    ]
+  },
+  {
+    "name": "WP-2",
+    "type": "simple",
+    "position": [-0.5, 0, -0.5],
+    "monitor": [
+      {
+        "screenId": "screen3",
+        "position": [0, 1.19, 0.05],
+        "texture": "screen_retail.png"
+      },
+      {
+        "screenId": "screen4",
+        "position": [0, 1.19, -0.05],
+        "texture": "screen_covid.png"
+      }
+    ],
+    "poster": [
+      {
+        "posterId": "poster3",
+        "position": [0, 1.4, 0.04],
+        "size": [0.685, 1.2, 0.001],
+        "texture": "poster_retail.png"
+      },
+      {
+        "posterId": "poster4",
+        "position": [0, 1.4, -0.04],
+        "size": [0.685, 1.2, 0.001],
+        "texture": "poster_covid.png"
+      }
+    ]
+  }
+]

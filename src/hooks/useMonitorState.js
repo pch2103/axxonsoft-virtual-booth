@@ -1,13 +1,12 @@
 import {useState} from "react";
 import {monitorMaterial} from '../components/data/monitorMaterial'
 
-export const useMonitors = () => {
-	const [monitors,] = useState([]);
+export const useMonitorState = () => {
+	const [monitorState,] = useState([]);
 	const [selected, setSelected] = useState(false)
 
 	const setActive = (screenId) => {
-
-		monitors.forEach(m => {
+		monitorState.forEach(m => {
 			if (m.screenId === screenId) {
 				if (!m.active) {
 					m.ref.current.children[1].material = monitorMaterial.selected
@@ -25,10 +24,10 @@ export const useMonitors = () => {
 		})
 	}
 
-	const setMonitors = ({screenId, ref, active=false}) => {
-		if (ref) monitors.push({ screenId, ref, active })
+	const setMonitorState= ({screenId, ref, active=false}) => {
+		if (ref) monitorState.push({ screenId, ref, active })
 	}
 
-	return {monitors, setMonitors, setActive, selected, setSelected}
+	return {monitorState, setMonitorState, setActive, selected, setSelected}
 }
 

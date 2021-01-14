@@ -1,30 +1,19 @@
 import React, {Suspense, useRef} from 'react'
 import {useGLTF} from '@react-three/drei/useGLTF'
-import MonitorWP from "./MonitorWP";
-import Poster from "./Poster";
+import BuildMonitor from "../BuildMonitor";
+import BuildPoster from "../BuildPoster";
 
-export default function VirtualWP(props) {
+export default function VirtualWP({...props}) {
 	const ref = useRef(null)
 	const {nodes, materials} = useGLTF('../../../virtualWP.glb')
-
 
 	return (
 			<Suspense fallback={null}>
 				<group ref={ref} {...props} dispose={null}>
-					<MonitorWP
-							info={props.info}
-							monitors = {props.monitors}
-							screenId = 'screen1'
-							position={[0, 1.19, 0.05]}
-							texture='/screen.png'/>
-					<MonitorWP
-							info={props.info}
-							monitors = {props.monitors}
-							screenId = 'screen2'
-							position={[0, 1.19, -0.05]}
-							texture='/screen_net.png'/>
-					<Poster position={[0, 1.4, 0.04]} size={[0.685, 1.2, 0.001]} texture='/poster_webinar.png'/>
-					<Poster position={[0, 1.4, -0.04]} size={[0.685, 1.2, 0.001]} texture='/poster_net.png'/>
+
+					<BuildMonitor {...props}/>
+					<BuildPoster {...props}/>
+
 					<group position={[0.27, 1.965, 0.21]}>
 						<mesh material={materials.Metall} geometry={nodes.Torus.geometry} position={[0, 0, 0]}/>
 						<mesh material={materials.WhiteWall} geometry={nodes.Sphere1.geometry} position={[0, 0.01, 0]}/>

@@ -23,9 +23,9 @@ function Info(props) {
 
 	return (
 			<div className={'infoPanel'}>
-				{!props.monitors.selected && (!props.info.infoText) && decorationDefault()}
-				{(props.monitors.selected && decorationSelected())}
-				{!props.monitors.selected && props.info.infoText}
+				{!props.monitorState.selected && (!props.info.infoText) && decorationDefault()}
+				{(props.monitorState.selected && decorationSelected())}
+				{!props.monitorState.selected && props.info.infoText}
 			</div>
 	);
 }

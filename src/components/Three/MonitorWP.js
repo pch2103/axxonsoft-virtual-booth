@@ -10,7 +10,7 @@ export default function MonitorWP(props) {
 	const [hovered, setHover] = useState(false)
 
 	useEffect(() => {
-		props.monitors.setMonitors({screenId: props.screenId, ref})
+		props.monitorState.setMonitorState({screenId: props.screenId, ref})
 		// eslint-disable-next-line
 	}, [])
 
@@ -27,7 +27,7 @@ export default function MonitorWP(props) {
 
 	const PointerClick = e => {
 		e.stopPropagation()
-		props.monitors.setActive(props.screenId)
+		props.monitorState.setActive(props.screenId)
 		props.info.setSelectedText(infoData[props.screenId])
 	}
 
