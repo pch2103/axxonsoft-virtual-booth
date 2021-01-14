@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Suspense} from "react";
 import "./assets/styles/App.scss";
 import {Canvas} from "react-three-fiber";
 import {Loader, OrbitControls, softShadows} from "@react-three/drei";
@@ -16,6 +16,7 @@ const App = () => {
 	const monitorState = useMonitorState()
 	return (
 			<>
+
 				<Canvas
 						className={'canvas'}
 						invalidateFrameloop
@@ -23,24 +24,27 @@ const App = () => {
 						shadowMap
 						camera={{position: [5, 3, 5], near: 1, fov: 25}}
 				>
-					<OrbitControls
-							enableDamping={true}
-							target={[0, 1, 0]}
-							dampingFactor={0.25}
-							rotateSpeed={0.4}
-							keyPanSpeed={0.4}
-							screenSpacePanning={true}
-							zoomSpeed={0.6}
-							enablePan={true}
-							panSpeed={0.4}
-							minPolarAngle={Math.PI / 4}
-							maxPolarAngle={Math.PI / 2}
-							minDistance={-500}
-							maxDistance={1000}
-					/>
-					<Lights/>
-					<BuildWP info={info} monitorState={monitorState}/>
-					<Floor/>
+					<Suspense fallback={null}>
+						<OrbitControls
+								enableDamping={true}
+								target={[0, 1, 0]}
+								dampingFactor={0.25}
+								rotateSpeed={0.4}
+								keyPanSpeed={0.4}
+								screenSpacePanning={true}
+								zoomSpeed={0.6}
+								enablePan={true}
+								panSpeed={0.4}
+								minPolarAngle={Math.PI / 4}
+								maxPolarAngle={Math.PI / 2}
+								minDistance={-500}
+								maxDistance={1000}
+						/>
+
+						<Lights/>
+						<BuildWP info={info} monitorState={monitorState}/>
+						<Floor/>
+					</Suspense>
 				</Canvas>
 				<Info info={info} monitorState={monitorState}/>
 				<Loader/>

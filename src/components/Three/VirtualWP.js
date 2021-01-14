@@ -1,4 +1,4 @@
-import React, {Suspense, useRef} from 'react'
+import React, {useRef} from 'react'
 import {useGLTF} from '@react-three/drei/useGLTF'
 import BuildMonitor from "../BuildMonitor";
 import BuildPoster from "../BuildPoster";
@@ -8,7 +8,6 @@ export default function VirtualWP({...props}) {
 	const {nodes, materials} = useGLTF('../../../virtualWP.glb')
 
 	return (
-			<Suspense fallback={null}>
 				<group ref={ref} {...props} dispose={null}>
 
 					<BuildMonitor {...props}/>
@@ -48,7 +47,6 @@ export default function VirtualWP({...props}) {
 					<mesh material={materials.Blue} geometry={nodes.Cube3.geometry} position={[0, 0.99, 0]}/>
 					<mesh castShadow material={materials.WhiteWall} geometry={nodes.Cube.geometry} position={[0, 1, 0]}/>
 				</group>
-			</Suspense>
 	)
 }
 
