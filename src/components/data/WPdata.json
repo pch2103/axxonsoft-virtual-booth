@@ -7,12 +7,14 @@
       {
         "screenId": "screen1",
         "position": [0, 1.19, 0.05],
-        "texture": "screen.png"
+        "texture": "screen.png",
+        "youtubeUrl": "https://www.youtube.com/watch?v=EfTDtu1O0TU&feature=emb_logo"
       },
       {
         "screenId": "screen2",
         "position": [0, 1.19, -0.05],
-        "texture": "screen_net.png"
+        "texture": "screen_net.png",
+        "youtubeUrl": "https://www.youtube.com/watch?v=EfTDtu1O0TU&feature=emb_logo"
       }
     ],
     "poster": [
@@ -38,12 +40,14 @@
       {
         "screenId": "screen3",
         "position": [0, 1.19, 0.05],
-        "texture": "screen_retail.png"
+        "texture": "screen_retail.png",
+        "youtubeUrl": "https://www.youtube.com/watch?v=EfTDtu1O0TU&feature=emb_logo"
       },
       {
         "screenId": "screen4",
         "position": [0, 1.19, -0.05],
-        "texture": "screen_covid.png"
+        "texture": "screen_covid.png",
+        "youtubeUrl": "https://www.youtube.com/watch?v=EfTDtu1O0TU&feature=emb_logo"
       }
     ],
     "poster": [

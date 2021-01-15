@@ -29,6 +29,8 @@ export default function MonitorWP(props) {
 		e.stopPropagation()
 		props.monitorState.setActive(props.screenId)
 		props.info.setSelectedText(infoData[props.screenId])
+		const selectedMonitorState = props.monitorState.getMonitorState(props.screenId)
+    if(!(selectedMonitorState.clickCounter % 2)) props.videoPlayer.setPlayVideo(props)
 	}
 
 	return (

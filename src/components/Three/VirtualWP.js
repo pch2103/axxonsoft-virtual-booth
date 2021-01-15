@@ -2,8 +2,9 @@ import React, {useRef} from 'react'
 import {useGLTF} from '@react-three/drei/useGLTF'
 import BuildMonitor from "../BuildMonitor";
 import BuildPoster from "../BuildPoster";
+import {monitorMaterial} from '../data/monitorMaterial'
 
-export default function VirtualWP({...props}) {
+export default function VirtualWP(props) {
 	const ref = useRef(null)
 	const {nodes, materials} = useGLTF('../../../virtualWP.glb')
 
@@ -15,19 +16,19 @@ export default function VirtualWP({...props}) {
 
 					<group position={[0.27, 1.965, 0.21]}>
 						<mesh material={materials.Metall} geometry={nodes.Torus.geometry} position={[0, 0, 0]}/>
-						<mesh material={materials.WhiteWall} geometry={nodes.Sphere1.geometry} position={[0, 0.01, 0]}/>
+						<mesh material={monitorMaterial.light} geometry={nodes.Sphere1.geometry} position={[0, 0.01, 0]}/>
 					</group>
 					<group position={[-0.27, 1.965, 0.21]}>
 						<mesh material={materials.Metall} geometry={nodes.Torus.geometry} position={[0, 0, 0]}/>
-						<mesh material={materials.WhiteWall} geometry={nodes.Sphere1.geometry} position={[0, 0.01, 0]}/>
+						<mesh material={monitorMaterial.light} geometry={nodes.Sphere1.geometry} position={[0, 0.01, 0]}/>
 					</group>
 					<group position={[0.27, 1.965, -0.21]}>
 						<mesh material={materials.Metall} geometry={nodes.Torus.geometry} position={[0, 0, 0]}/>
-						<mesh material={materials.WhiteWall} geometry={nodes.Sphere1.geometry} position={[0, 0.01, 0]}/>
+						<mesh material={monitorMaterial.light} geometry={nodes.Sphere1.geometry} position={[0, 0.01, 0]}/>
 					</group>
 					<group position={[-0.27, 1.965, -0.21]}>
 						<mesh material={materials.Metall} geometry={nodes.Torus.geometry} position={[0, 0, 0]}/>
-						<mesh material={materials.WhiteWall} geometry={nodes.Sphere1.geometry} position={[0, 0.01, 0]}/>
+						<mesh material={monitorMaterial.light} geometry={nodes.Sphere1.geometry} position={[0, 0.01, 0]}/>
 					</group>
 					<group position={[0, 0.42, 0]}>
 						<mesh material={materials.Metall} geometry={nodes.Cylinder2.geometry} position={[-0.28, -0.23, -0.3]}/>
@@ -41,7 +42,7 @@ export default function VirtualWP({...props}) {
 					<mesh castShadow material={materials.WhiteWall} geometry={nodes.Cube5.geometry} position={[0.27, 0.04, 0]}/>
 					<mesh castShadow material={materials.WhiteWall} geometry={nodes.Cube4.geometry} position={[-0.27, 0.04, 0]}/>
 					<mesh material={materials.Blue} geometry={nodes.Cube2.geometry} position={[0, 0.45, 0]}/>
-					<mesh material={materials.DarkGray} geometry={nodes.Cube7.geometry} position={[0, 0.83, 0]}/>
+					{/*<mesh material={materials.DarkGray} geometry={nodes.Cube7.geometry} position={[0, 0.83, 0]}/>*/}
 					<mesh castShadow material={materials.WhiteWall} geometry={nodes.Cube6.geometry} position={[0, 0.45, 0]}/>
 					<mesh material={materials.WhiteWall} geometry={nodes.Cube1.geometry} position={[0, 2, 0]}/>
 					<mesh material={materials.Blue} geometry={nodes.Cube3.geometry} position={[0, 0.99, 0]}/>

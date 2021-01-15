@@ -8,12 +8,14 @@ import Info from "./components/Info";
 import {useInfo} from "./hooks/useInfo";
 import {useMonitorState} from "./hooks/useMonitorState";
 import BuildWP from "./components/BuildWP";
+import useVideoPlayer from "./hooks/useVideoPlayer";
 
 softShadows(undefined)
 
 const App = () => {
 	const info = useInfo()
 	const monitorState = useMonitorState()
+	const videoPlayer = useVideoPlayer()
 	return (
 			<>
 
@@ -42,11 +44,11 @@ const App = () => {
 						/>
 
 						<Lights/>
-						<BuildWP info={info} monitorState={monitorState}/>
+						<BuildWP info={info} monitorState={monitorState} videoPlayer={videoPlayer}/>
 						<Floor/>
 					</Suspense>
 				</Canvas>
-				<Info info={info} monitorState={monitorState}/>
+				<Info info={info} monitorState={monitorState} videoPlayer={videoPlayer}/>
 				<Loader/>
 			</>
 	);

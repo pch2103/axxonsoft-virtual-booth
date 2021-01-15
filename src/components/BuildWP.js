@@ -2,7 +2,7 @@ import React from 'react';
 import WpData from "./data/WPdata.json"
 import VirtualWP from "./Three/VirtualWP";
 
-function BuildWP({info, monitorState}) {
+function BuildWP({info, monitorState, videoPlayer}) {
 
 	return (
 			<>
@@ -11,6 +11,7 @@ function BuildWP({info, monitorState}) {
 						return <VirtualWP
 								info={info}
 								monitorState={monitorState}
+								videoPlayer={videoPlayer}
 								position={_.position}
 								monitor={_.monitor}
 								poster={_.poster}
