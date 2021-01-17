@@ -6,7 +6,6 @@ export const useMonitorState = () => {
 	const [selected, setSelected] = useState(false)
 
 	const getMonitorState = (screenId) => {
-
 		return monitorState.find( m => m.screenId === screenId)
 	}
 

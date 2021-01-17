@@ -1,12 +1,8 @@
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 
 function useVideoPlayer(props) {
-	const [playVideo, setPlayVideo] = useState({})
+	const [playVideo, setPlayVideo] = useState(null)
 
-	useEffect(() => {
-		console.log("PLAY", playVideo)
-			},[playVideo]
-	)
 	return {playVideo, setPlayVideo}
 }
 

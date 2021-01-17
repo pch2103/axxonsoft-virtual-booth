@@ -9,6 +9,7 @@ import {useInfo} from "./hooks/useInfo";
 import {useMonitorState} from "./hooks/useMonitorState";
 import BuildWP from "./components/BuildWP";
 import useVideoPlayer from "./hooks/useVideoPlayer";
+import VideoWindow from "./components/VideoWindow";
 
 softShadows(undefined)
 
@@ -49,6 +50,7 @@ const App = () => {
 					</Suspense>
 				</Canvas>
 				<Info info={info} monitorState={monitorState} videoPlayer={videoPlayer}/>
+				<VideoWindow videoPlayer={videoPlayer} />
 				<Loader/>
 			</>
 	);

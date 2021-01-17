@@ -41,4 +41,42 @@ body,
     color: #03B2FF;
   }
 
+.videoBack {
+    z-index: 999;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+
+  .closeButton{
+    color: #fff;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+
+    .btn {
+      color: #fff;
+
+      &:hover {
+        color: #03B2FF;
+        cursor: pointer;
+      }
+    }
+  }
+  .videoPlayer {
+    position: relative;
+    top: 90px;
+  }
+
+}
+
+
+
+
+
 

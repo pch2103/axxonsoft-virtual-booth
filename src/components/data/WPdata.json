@@ -8,13 +8,13 @@
         "screenId": "screen1",
         "position": [0, 1.19, 0.05],
         "texture": "screen.png",
-        "youtubeUrl": "https://www.youtube.com/watch?v=EfTDtu1O0TU&feature=emb_logo"
+        "youtubeVideoId": "2g811Eo7K8U"
       },
       {
         "screenId": "screen2",
         "position": [0, 1.19, -0.05],
         "texture": "screen_net.png",
-        "youtubeUrl": "https://www.youtube.com/watch?v=EfTDtu1O0TU&feature=emb_logo"
+        "youtubeVideoId": "EfTDtu1O0TU"
       }
     ],
     "poster": [
@@ -41,13 +41,13 @@
         "screenId": "screen3",
         "position": [0, 1.19, 0.05],
         "texture": "screen_retail.png",
-        "youtubeUrl": "https://www.youtube.com/watch?v=EfTDtu1O0TU&feature=emb_logo"
+        "youtubeVideoId": "EfTDtu1O0TU"
       },
       {
         "screenId": "screen4",
         "position": [0, 1.19, -0.05],
         "texture": "screen_covid.png",
-        "youtubeUrl": "https://www.youtube.com/watch?v=EfTDtu1O0TU&feature=emb_logo"
+        "youtubeVideoId": "EfTDtu1O0TU"
       }
     ],
     "poster": [

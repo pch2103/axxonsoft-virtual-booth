@@ -6,8 +6,13 @@ import {monitorMaterial} from '../data/monitorMaterial'
 
 export default function MonitorWP(props) {
 	const ref = useRef(null);
-	const texture_1 = useLoader(TextureLoader, props.texture);
+	const texture_video = useLoader(TextureLoader, props.texture);
+	const texture_playIcon = useLoader(TextureLoader, '/play_screen.png');
+	const texture_playIconAlpha = useLoader(TextureLoader, '/play_alpha.png');
+	const selectedMonitorState = props.monitorState.getMonitorState(props.screenId)
 	const [hovered, setHover] = useState(false)
+
+	console.log('selectedMonitorState', selectedMonitorState)
 
 	useEffect(() => {
 		props.monitorState.setMonitorState({screenId: props.screenId, ref})
@@ -29,15 +34,14 @@ export default function MonitorWP(props) {
 		e.stopPropagation()
 		props.monitorState.setActive(props.screenId)
 		props.info.setSelectedText(infoData[props.screenId])
-		const selectedMonitorState = props.monitorState.getMonitorState(props.screenId)
-    if(!(selectedMonitorState.clickCounter % 2)) props.videoPlayer.setPlayVideo(props)
+    if(!(selectedMonitorState.clickCounter % 2)) props.videoPlayer.setPlayVideo(props.youtubeVideoId)
 	}
 
 	return (
 			<group ref={ref}>
 				<mesh {...props} onPointerOver={PointerOver} onPointerOut={PointerOut} onClick={PointerClick}>
 					<boxBufferGeometry attach="geometry" args={[0.61, 0.35, 0.015]}/>
-					<meshStandardMaterial attach="material" map={texture_1}/>
+					<meshStandardMaterial attach="material" map={texture_video}/>
 				</mesh>
 				<mesh {...props} material={monitorMaterial.default}>
 					<boxBufferGeometry attach="geometry" args={[0.63, 0.37, 0.012]}/>
@@ -45,6 +49,13 @@ export default function MonitorWP(props) {
 				{ hovered &&
 				<mesh {...props} material={monitorMaterial.hovered}>
 					<boxBufferGeometry attach="geometry" args={[0.65, 0.39, 0.010]}/>
+				</mesh>
+				}
+				{ (selectedMonitorState !== undefined) && selectedMonitorState.active &&
+				<mesh {...props}>
+					<boxBufferGeometry attach="geometry" args={[0.61, 0.35, 0.015]}/>
+					<meshStandardMaterial attach="material" map={texture_playIcon} alphaMap={texture_playIconAlpha}
+																transparent={true}/>
 				</mesh>
 				}
 			</group>

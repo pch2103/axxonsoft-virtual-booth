@@ -10,7 +10,7 @@ function BuildMonitor({monitor, info, monitorState, videoPlayer}) {
 				screenId={_.screenId}
 				position={_.position}
 				texture={`/${_.texture}`}
-				youtubeUrl={_.youtubeUrl}
+				youtubeVideoId={_.youtubeVideoId}
 				key={_.screenId}
 		/>
 	})
