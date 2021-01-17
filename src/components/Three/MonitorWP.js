@@ -36,10 +36,20 @@ export default function MonitorWP(props) {
 		props.info.setSelectedText(infoData[props.screenId])
     if(!(selectedMonitorState.clickCounter % 2)) props.videoPlayer.setPlayVideo(props.youtubeVideoId)
 	}
+	// const PointerTouch = e => {
+	// 	e.stopPropagation()
+	// 	alert("Touch!")
+	// }
+
 
 	return (
 			<group ref={ref}>
-				<mesh {...props} onPointerOver={PointerOver} onPointerOut={PointerOut} onClick={PointerClick}>
+				<mesh {...props}
+							onPointerOver={PointerOver}
+							onPointerOut={PointerOut}
+							onClick={PointerClick}
+							onPointerUp={PointerClick}
+				>
 					<boxBufferGeometry attach="geometry" args={[0.61, 0.35, 0.015]}/>
 					<meshStandardMaterial attach="material" map={texture_video}/>
 				</mesh>
