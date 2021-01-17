@@ -47,7 +47,6 @@ export default function MonitorWP(props) {
 				<mesh {...props}
 							onPointerOver={PointerOver}
 							onPointerOut={PointerOut}
-							onClick={PointerClick}
 							onPointerUp={PointerClick}
 				>
 					<boxBufferGeometry attach="geometry" args={[0.61, 0.35, 0.015]}/>
