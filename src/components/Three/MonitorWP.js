@@ -12,8 +12,6 @@ export default function MonitorWP(props) {
 	const selectedMonitorState = props.monitorState.getMonitorState(props.screenId)
 	const [hovered, setHover] = useState(false)
 
-	console.log('selectedMonitorState', selectedMonitorState)
-
 	useEffect(() => {
 		props.monitorState.setMonitorState({screenId: props.screenId, ref})
 		// eslint-disable-next-line
@@ -27,20 +25,18 @@ export default function MonitorWP(props) {
 	const PointerOut = e => {
 		e.stopPropagation()
 		setHover(false)
-		props.info.setInfoText(null)
+		if(infoData.close !== props.info.infoText) props.info.setInfoText(null)
 	}
 
 	const PointerClick = e => {
-		e.stopPropagation()
+		console.log()
+		e.stopPropagation('selectedMonitorState', selectedMonitorState)
 		props.monitorState.setActive(props.screenId)
 		props.info.setSelectedText(infoData[props.screenId])
-    if(!(selectedMonitorState.clickCounter % 2)) props.videoPlayer.setPlayVideo(props.youtubeVideoId)
+    if((selectedMonitorState!== undefined) && !(selectedMonitorState.clickCounter % 2)) {
+			props.videoPlayer.setPlayVideo(props.youtubeVideoId)
+		}
 	}
-	// const PointerTouch = e => {
-	// 	e.stopPropagation()
-	// 	alert("Touch!")
-	// }
-
 
 	return (
 			<group ref={ref}>

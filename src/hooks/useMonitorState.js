@@ -20,7 +20,6 @@ export const useMonitorState = () => {
 				} else {
 					if (m.active) m.ref.current.children[1].material = monitorMaterial.default
 					m.active = false
-					setSelected(false)
 				}
 			} else {
 				m.clickCounter=0

@@ -41,13 +41,13 @@
         "screenId": "screen3",
         "position": [0, 1.19, 0.05],
         "texture": "screen_retail.png",
-        "youtubeVideoId": "EfTDtu1O0TU"
+        "youtubeVideoId": "kCB7b0ORbL4"
       },
       {
         "screenId": "screen4",
         "position": [0, 1.19, -0.05],
         "texture": "screen_covid.png",
-        "youtubeVideoId": "EfTDtu1O0TU"
+        "youtubeVideoId": "lddlsQtfFCM"
       }
     ],
     "poster": [

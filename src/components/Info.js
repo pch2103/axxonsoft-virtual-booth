@@ -1,7 +1,6 @@
 import React from 'react';
 import {BiMouseAlt, BiMobileAlt, BiPlayCircle} from "react-icons/bi";
 
-
 function Info(props) {
 
 	const decorationDefault = () => {
@@ -21,10 +20,18 @@ function Info(props) {
 		</>
 	}
 
+	const decorationPlayed = () => {
+		return <>
+			<BiPlayCircle className={'selectedText'}/>
+			&nbsp;<span className={'selectedText'}>{props.info.selectedText}</span>
+		</>
+	}
+
 	return (
 			<div className={'infoPanel'}>
-				{!props.monitorState.selected && (!props.info.infoText) && decorationDefault()}
-				{(props.monitorState.selected && decorationSelected())}
+				{(!props.monitorState.selected && !props.info.infoText) && decorationDefault()}
+				{(props.monitorState.selected && !props.videoPlayer.playVideo) && decorationSelected()}
+				{(props.monitorState.selected && props.videoPlayer.playVideo) && decorationPlayed()}
 				{!props.monitorState.selected && props.info.infoText}
 			</div>
 	);

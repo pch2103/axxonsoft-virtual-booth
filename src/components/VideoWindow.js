@@ -1,16 +1,17 @@
 import React, {useEffect, useState} from 'react';
 import YouTube from 'react-youtube';
-import { VscChromeClose } from "react-icons/vsc";
+import {FiX} from "react-icons/fi";
 
-function VideoWindow({videoPlayer}) {
+function VideoWindow({videoPlayer, ...props}) {
 	const [play, setPlay] = useState(false)
 
 	const opts = {
-		height: '390',
-		width: '640',
+		width: '100%',
+		height: '100%',
 		playerVars: {
 			// https://developers.google.com/youtube/player_parameters
 			autoplay: 1,
+			controls: 0,
 			start: 0
 		},
 	};
@@ -26,14 +27,22 @@ function VideoWindow({videoPlayer}) {
 	const handlerBackClick = e => {
 		e.preventDefault()
 		videoPlayer.setPlayVideo(null)
+		props.info.setInfoText(null)
+		props.monitorState.setSelected(false)
 		setPlay(false)
 	}
 
 	return <>
 		{play && (
 				<div className={'videoBack'}>
-					<div className={'closeButton'} onClick={handlerBackClick}><VscChromeClose className={'btn'}/></div>
-					<YouTube className={'videoPlayer'} videoId={videoPlayer.playVideo} opts={opts}/>
+					<div className={'videoButtonWrapper'}>
+						<div className={'closeButton'} onClick={handlerBackClick}><FiX className={'btn'}/>CLOSE</div>
+					</div>
+					<YouTube
+							className={'videoPlayer'}
+							containerClassName={'videoWrapper'}
+							videoId={videoPlayer.playVideo}
+							opts={opts}/>
 				</div>
 		)}
 	</>

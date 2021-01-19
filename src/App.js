@@ -50,7 +50,7 @@ const App = () => {
 					</Suspense>
 				</Canvas>
 				<Info info={info} monitorState={monitorState} videoPlayer={videoPlayer}/>
-				<VideoWindow videoPlayer={videoPlayer} />
+				<VideoWindow info={info} monitorState={monitorState} videoPlayer={videoPlayer} />
 				<Loader/>
 			</>
 	);
