@@ -19,7 +19,6 @@ const App = () => {
 	const videoPlayer = useVideoPlayer()
 	return (
 			<>
-
 				<Canvas
 						className={'canvas'}
 						invalidateFrameloop

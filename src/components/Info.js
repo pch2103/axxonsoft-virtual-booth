@@ -10,8 +10,9 @@ function Info(props) {
 	}
 
 	const decorationSelected = () => {
+		const classes = ['btn', 'selectedText']
 		return <>
-			<BiPlayCircle className={'selectedText'}/>
+			<BiPlayCircle className={classes.join(' ')}/>
 			&nbsp;{props.info.selectedText}
 			&nbsp;&#8212;&nbsp;
 			<span className={'selectedText'}>

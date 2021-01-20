@@ -4,13 +4,11 @@ import {FiX} from "react-icons/fi";
 
 function VideoWindow({videoPlayer, ...props}) {
 	const [play, setPlay] = useState(false)
-
 	const opts = {
-		width: '100%',
-		height: '100%',
 		playerVars: {
 			// https://developers.google.com/youtube/player_parameters
 			autoplay: 1,
+			showinfo: 0,
 			controls: 0,
 			start: 0
 		},
@@ -36,11 +34,14 @@ function VideoWindow({videoPlayer, ...props}) {
 		{play && (
 				<div className={'videoBack'}>
 					<div className={'videoButtonWrapper'}>
-						<div className={'closeButton'} onClick={handlerBackClick}><FiX className={'btn'}/>CLOSE</div>
+						<div className={'closeButton'} onClick={handlerBackClick}>
+							<span className={'btn'}><FiX/></span>&nbsp;
+							<span>CLOSE</span>
+						</div>
 					</div>
 					<YouTube
 							className={'videoPlayer'}
-							containerClassName={'videoWrapper'}
+							// containerClassName={'videoWrapper'}
 							videoId={videoPlayer.playVideo}
 							opts={opts}/>
 				</div>
