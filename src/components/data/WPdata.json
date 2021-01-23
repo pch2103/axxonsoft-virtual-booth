@@ -1,19 +1,43 @@
 [
   {
+    "name": "iscWest_model",
+    "type": "main",
+    "position": [0, 0, 0],
+    "monitor": [
+      {
+        "screenId": "screen0",
+        "position": [0, 1.40, 0.51],
+        "size": [1.6, 0.9],
+        "texture": "screen_main.jpg",
+        "youtubeVideoId": "ocmt3banVdc"
+      }
+    ],
+    "poster": [
+      {
+        "posterId": "poster0",
+        "position": [0, 2.094, 0.501],
+        "size": [2, 0.45, 0.001],
+        "texture": "logo.png"
+      }
+    ]
+  },
+  {
     "name": "WP-1",
     "type": "simple",
-    "position": [0.5, 0, 0.5],
+    "position": [1.5, 0, 1.5],
     "monitor": [
       {
         "screenId": "screen1",
         "position": [0, 1.19, 0.05],
-        "texture": "screen.png",
-        "youtubeVideoId": "2g811Eo7K8U"
+        "size": [0.61, 0.35],
+        "texture": "screen_webinar.jpg",
+        "youtubeVideoId": "cAd5fBKqHH0"
       },
       {
         "screenId": "screen2",
         "position": [0, 1.19, -0.05],
-        "texture": "screen_net.png",
+        "size": [0.61, 0.35],
+        "texture": "screen_net.jpg",
         "youtubeVideoId": "EfTDtu1O0TU"
       }
     ],
@@ -35,18 +59,20 @@
   {
     "name": "WP-2",
     "type": "simple",
-    "position": [-0.5, 0, -0.5],
+    "position": [-1.5, 0, 1.5],
     "monitor": [
       {
         "screenId": "screen3",
         "position": [0, 1.19, 0.05],
-        "texture": "screen_retail.png",
+        "size": [0.61, 0.35],
+        "texture": "screen_retail.jpg",
         "youtubeVideoId": "kCB7b0ORbL4"
       },
       {
         "screenId": "screen4",
         "position": [0, 1.19, -0.05],
-        "texture": "screen_covid.png",
+        "size": [0.61, 0.35],
+        "texture": "screen_covid.jpg",
         "youtubeVideoId": "lddlsQtfFCM"
       }
     ],

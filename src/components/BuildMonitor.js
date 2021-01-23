@@ -8,6 +8,7 @@ function BuildMonitor({monitor, info, monitorState, videoPlayer}) {
 				monitorState={monitorState}
 				videoPlayer={videoPlayer}
 				screenId={_.screenId}
+				size={_.size}
 				position={_.position}
 				texture={`/${_.texture}`}
 				youtubeVideoId={_.youtubeVideoId}

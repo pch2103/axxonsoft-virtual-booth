@@ -11,6 +11,7 @@ export default function MonitorWP(props) {
 	const texture_playIconAlpha = useLoader(TextureLoader, '/play_alpha.png');
 	const selectedMonitorState = props.monitorState.getMonitorState(props.screenId)
 	const [hovered, setHover] = useState(false)
+	const [clicked, setClicked] = useState(false)
 
 	useEffect(() => {
 		props.monitorState.setMonitorState({screenId: props.screenId, ref})
@@ -25,17 +26,25 @@ export default function MonitorWP(props) {
 	const PointerOut = e => {
 		e.stopPropagation()
 		setHover(false)
-		if(infoData.close !== props.info.infoText) props.info.setInfoText(null)
+		if (infoData.close !== props.info.infoText) props.info.setInfoText(null)
 	}
 
 	const PointerClick = e => {
-		console.log()
-		e.stopPropagation('selectedMonitorState', selectedMonitorState)
-		props.monitorState.setActive(props.screenId)
-		props.info.setSelectedText(infoData[props.screenId])
-    if((selectedMonitorState!== undefined) && !(selectedMonitorState.clickCounter % 2)) {
-			props.videoPlayer.setPlayVideo(props.youtubeVideoId)
+		e.stopPropagation()
+		if (clicked) {
+			props.monitorState.setActive(props.screenId)
+			props.info.setSelectedText(infoData[props.screenId])
+			if ((
+					selectedMonitorState !== undefined) && !(
+					selectedMonitorState.clickCounter % 2)) {
+				props.videoPlayer.setPlayVideo(props.youtubeVideoId)
+			}
+			setClicked(false)
 		}
+	}
+	const PointerDown = e => {
+		e.stopPropagation()
+		setClicked(true)
 	}
 
 	return (
@@ -43,22 +52,24 @@ export default function MonitorWP(props) {
 				<mesh {...props}
 							onPointerOver={PointerOver}
 							onPointerOut={PointerOut}
+							onPointerDown={PointerDown}
 							onPointerUp={PointerClick}
 				>
-					<boxBufferGeometry attach="geometry" args={[0.61, 0.35, 0.015]}/>
+					<boxBufferGeometry attach="geometry" args={[props.size[0], props.size[1], 0.015]}/>
 					<meshStandardMaterial attach="material" map={texture_video}/>
 				</mesh>
 				<mesh {...props} material={monitorMaterial.default}>
-					<boxBufferGeometry attach="geometry" args={[0.63, 0.37, 0.012]}/>
+					<boxBufferGeometry attach="geometry" args={[props.size[0] + 0.02, props.size[1] + 0.02, 0.012]}/>
 				</mesh>
-				{ hovered &&
+				{hovered &&
 				<mesh {...props} material={monitorMaterial.hovered}>
-					<boxBufferGeometry attach="geometry" args={[0.65, 0.39, 0.010]}/>
+					<boxBufferGeometry attach="geometry" args={[props.size[0] + 0.04, props.size[1] + 0.04, 0.010]}/>
 				</mesh>
 				}
-				{ (selectedMonitorState !== undefined) && selectedMonitorState.active &&
+				{(
+						selectedMonitorState !== undefined) && selectedMonitorState.active &&
 				<mesh {...props}>
-					<boxBufferGeometry attach="geometry" args={[0.61, 0.35, 0.015]}/>
+					<boxBufferGeometry attach="geometry" args={[props.size[0], props.size[1], 0.015]}/>
 					<meshStandardMaterial attach="material" map={texture_playIcon} alphaMap={texture_playIconAlpha}
 																transparent={true}/>
 				</mesh>

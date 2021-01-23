@@ -7,7 +7,7 @@ import Floor from "./components/Three/Floor";
 import Info from "./components/Info";
 import {useInfo} from "./hooks/useInfo";
 import {useMonitorState} from "./hooks/useMonitorState";
-import BuildWP from "./components/BuildWP";
+import BuildBooth from "./components/BuildBooth";
 import useVideoPlayer from "./hooks/useVideoPlayer";
 import VideoWindow from "./components/VideoWindow";
 
@@ -24,7 +24,7 @@ const App = () => {
 						invalidateFrameloop
 						colorManagement
 						shadowMap
-						camera={{position: [5, 3, 5], near: 1, fov: 25}}
+						camera={{position: [3, 2, 5], near: 1, fov: 45}}
 				>
 					<Suspense fallback={null}>
 						<OrbitControls
@@ -44,7 +44,7 @@ const App = () => {
 						/>
 
 						<Lights/>
-						<BuildWP info={info} monitorState={monitorState} videoPlayer={videoPlayer}/>
+						<BuildBooth info={info} monitorState={monitorState} videoPlayer={videoPlayer}/>
 						<Floor/>
 					</Suspense>
 				</Canvas>
