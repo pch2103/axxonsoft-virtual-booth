@@ -1,7 +1,7 @@
 import React, {Suspense} from "react";
 import "./assets/styles/App.scss";
 import {Canvas} from "react-three-fiber";
-import {Loader, OrbitControls, softShadows} from "@react-three/drei";
+import {Loader, OrbitControls} from "@react-three/drei";
 import Lights from "./components/Three/lights";
 import Floor from "./components/Three/Floor";
 import Info from "./components/Info";
@@ -11,7 +11,7 @@ import BuildBooth from "./components/BuildBooth";
 import useVideoPlayer from "./hooks/useVideoPlayer";
 import VideoWindow from "./components/VideoWindow";
 
-softShadows(undefined)
+// softShadows(undefined)
 
 const App = () => {
 	const info = useInfo()
@@ -24,7 +24,7 @@ const App = () => {
 						invalidateFrameloop
 						colorManagement
 						shadowMap
-						camera={{position: [3, 2, 5], near: 1, fov: 45}}
+						camera={{position: [2, 2, 5], near: 1, fov: 55}}
 				>
 					<Suspense fallback={null}>
 						<OrbitControls

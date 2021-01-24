@@ -21,36 +21,6 @@ export default function MainBooth(props) {
         <meshPhongMaterial attach="material" map={mapTexture}/>
       </mesh>
 
-        <group position={[0.23, 3.09, 0]}>
-          <mesh
-              material={materials.WhiteWall}
-              geometry={nodes.corona13.geometry}
-              position={[0.97, 0, 0]}
-              rotation={[0, 1.57, 0]}
-          />
-          <mesh
-              material={materials.WhiteWall}
-              geometry={nodes.corona12.geometry}
-              position={[-1.43, 0, 0]}
-              rotation={[0, 1.57, 0]}
-          />
-          <mesh material={materials.WhiteWall} geometry={nodes.corona11.geometry} position={[-0.23, 0, -0.71]} />
-          <mesh material={materials.WhiteWall} geometry={nodes.corona1.geometry} position={[-0.23, 0, 0.71]} />
-          <mesh
-              material={materials.Metall}
-              geometry={nodes.corona14.geometry}
-              position={[0.93, 0.17, 0]}
-              rotation={[0, 1.57, 0]}
-          />
-          <mesh
-              material={materials.Metall}
-              geometry={nodes.corona15.geometry}
-              position={[-1.39, 0.17, 0]}
-              rotation={[0, 1.57, 0]}
-          />
-          <mesh material={materials.Metall} geometry={nodes.corona17.geometry} position={[-0.23, 0.17, -0.67]} />
-          <mesh material={materials.Metall} geometry={nodes.corona16.geometry} position={[-0.23, 0.17, 0.67]} />
-        </group>
         <group position={[0.92, 0.34, 0.04]} rotation={[0, -1.57, 0]}>
           <mesh material={materials.WhiteWall} geometry={nodes.Cube5c.geometry} position={[0.23, -0.31, -0.11]} />
           <mesh material={materials.WhiteWall} geometry={nodes.Cube4c.geometry} position={[-0.32, -0.31, -0.11]} />
@@ -62,7 +32,7 @@ export default function MainBooth(props) {
           <mesh material={materials.Metall} geometry={nodes.Sphere1c.geometry} position={[-0.26, 0.1, -0.34]} />
           <mesh material={materials.Metall} geometry={nodes['Sphere-c'].geometry} position={[-0.27, 0.1, 0.11]} />
           <mesh material={materials.Blue} geometry={nodes.Cube2c.geometry} position={[-0.04, 0.11, -0.11]} />
-          <mesh material={materials.WhiteWall} geometry={nodes.Cube6c.geometry} position={[-0.04, 0.11, -0.11]} />
+          <mesh castShadow material={materials.WhiteWall} geometry={nodes.Cube6c.geometry} position={[-0.04, 0.11, -0.11]} />
         </group>
         <group position={[-1.16, 0.34, 0.04]} rotation={[0, -1.57, 0]}>
           <mesh material={materials.WhiteWall} geometry={nodes.Cube5b.geometry} position={[0.23, -0.31, -0.11]} />
@@ -75,7 +45,7 @@ export default function MainBooth(props) {
           <mesh material={materials.Metall} geometry={nodes.Sphere1b.geometry} position={[-0.26, 0.1, -0.34]} />
           <mesh material={materials.Metall} geometry={nodes['Sphere-b'].geometry} position={[-0.27, 0.1, 0.11]} />
           <mesh material={materials.Blue} geometry={nodes.Cube2b.geometry} position={[-0.04, 0.11, -0.11]} />
-          <mesh material={materials.WhiteWall} geometry={nodes.Cube6b.geometry} position={[-0.04, 0.11, -0.11]} />
+          <mesh castShadow material={materials.WhiteWall} geometry={nodes.Cube6b.geometry} position={[-0.04, 0.11, -0.11]} />
         </group>
         <group position={[0.36, 0.34, 0.66]}>
           <mesh material={materials.WhiteWall} geometry={nodes.Cube5a.geometry} position={[0.23, -0.31, -0.11]} />
@@ -88,7 +58,7 @@ export default function MainBooth(props) {
           <mesh material={materials.Metall} geometry={nodes.Sphere1a.geometry} position={[0.18, 0.1, -0.34]} />
           <mesh material={materials.Metall} geometry={nodes.Spherea.geometry} position={[0.18, 0.1, 0.11]} />
           <mesh material={materials.Blue} geometry={nodes.Cube2a.geometry} position={[-0.04, 0.11, -0.11]} />
-          <mesh material={materials.WhiteWall} geometry={nodes.Cube6a.geometry} position={[-0.04, 0.11, -0.11]} />
+          <mesh castShadow material={materials.WhiteWall} geometry={nodes.Cube6a.geometry} position={[-0.04, 0.11, -0.11]} />
         </group>
         <group position={[-0.28, 0.34, 0.66]}>
           <mesh material={materials.WhiteWall} geometry={nodes.Cube5.geometry} position={[0.23, -0.31, -0.11]} />
@@ -101,9 +71,9 @@ export default function MainBooth(props) {
           <mesh material={materials.Metall} geometry={nodes.Sphere1.geometry} position={[-0.26, 0.1, -0.34]} />
           <mesh material={materials.Metall} geometry={nodes.Sphere.geometry} position={[-0.27, 0.1, 0.11]} />
           <mesh material={materials.Blue} geometry={nodes.Cube2.geometry} position={[-0.04, 0.11, -0.11]} />
-          <mesh material={materials.WhiteWall} geometry={nodes.Cube6.geometry} position={[-0.04, 0.11, -0.11]} />
+          <mesh castShadow material={materials.WhiteWall} geometry={nodes.Cube6.geometry} position={[-0.04, 0.11, -0.11]} />
         </group>
-        <mesh material={materials.WhiteWall} geometry={nodes.Cube.geometry} position={[0, 1.25, 0]} />
+        <mesh castShadow material={materials.WhiteWall} geometry={nodes.Cube.geometry} position={[0, 1.25, 0]} />
 
         <mesh
             material={materials.WhiteWall}
@@ -118,7 +88,7 @@ export default function MainBooth(props) {
             position={[0, 1.28, -0.44]}
             rotation={[Math.PI / 2, 0, 0]}
         />
-        <mesh material={materials.Blue} geometry={nodes.top1.geometry} position={[0, 2.63, 0]} />
+        <mesh castShadow material={materials.Blue} geometry={nodes.top1.geometry} position={[0, 2.63, 0]} />
         <mesh material={materials.Lamp} geometry={nodes.top.geometry} position={[0, 2.62, 0]} />
       </group>
   )

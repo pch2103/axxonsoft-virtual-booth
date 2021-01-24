@@ -48,8 +48,8 @@ export default function MonitorWP(props) {
 	}
 
 	return (
-			<group ref={ref}>
-				<mesh {...props}
+			<group {...props} ref={ref}>
+				<mesh
 							onPointerOver={PointerOver}
 							onPointerOut={PointerOut}
 							onPointerDown={PointerDown}
@@ -58,17 +58,17 @@ export default function MonitorWP(props) {
 					<boxBufferGeometry attach="geometry" args={[props.size[0], props.size[1], 0.015]}/>
 					<meshStandardMaterial attach="material" map={texture_video}/>
 				</mesh>
-				<mesh {...props} material={monitorMaterial.default}>
+				<mesh material={monitorMaterial.default}>
 					<boxBufferGeometry attach="geometry" args={[props.size[0] + 0.02, props.size[1] + 0.02, 0.012]}/>
 				</mesh>
 				{hovered &&
-				<mesh {...props} material={monitorMaterial.hovered}>
+				<mesh material={monitorMaterial.hovered}>
 					<boxBufferGeometry attach="geometry" args={[props.size[0] + 0.04, props.size[1] + 0.04, 0.010]}/>
 				</mesh>
 				}
 				{(
 						selectedMonitorState !== undefined) && selectedMonitorState.active &&
-				<mesh {...props}>
+				<mesh>
 					<boxBufferGeometry attach="geometry" args={[props.size[0], props.size[1], 0.015]}/>
 					<meshStandardMaterial attach="material" map={texture_playIcon} alphaMap={texture_playIconAlpha}
 																transparent={true}/>

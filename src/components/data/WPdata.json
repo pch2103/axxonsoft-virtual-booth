@@ -5,11 +5,42 @@
     "position": [0, 0, 0],
     "monitor": [
       {
-        "screenId": "screen0",
+        "screenId": "video wall",
         "position": [0, 1.40, 0.51],
         "size": [1.6, 0.9],
         "texture": "screen_main.jpg",
         "youtubeVideoId": "ocmt3banVdc"
+      },
+      {
+        "screenId": "screen01",
+        "position": [-1.01, 1.2, 0],
+        "size": [0.75, 0.43],
+        "rotation": [0, 90, 0],
+        "texture": "screen_neural.jpg",
+        "youtubeVideoId": "M3aAgDaJwvs"
+      },
+      {
+        "screenId": "screen02",
+        "position": [1.01, 1.2, 0],
+        "size": [0.75, 0.43],
+        "rotation": [0, 90, 0],
+        "texture": "screen_mobotix.jpg",
+        "youtubeVideoId": "JqHnobsSLvI"
+      },
+      {
+        "screenId": "screen03",
+        "position": [0, 2.63, 0.542],
+        "size": [0.61, 0.35],
+        "texture": "screen_vsaas.jpg",
+        "youtubeVideoId": "HCsEB3ezoQU"
+      }
+    ,
+      {
+        "screenId": "screen04",
+        "position": [0, 2.63, -0.542],
+        "size": [0.61, 0.35],
+        "texture": "screen_vms.jpg",
+        "youtubeVideoId": "ag2BmGN9u5I"
       }
     ],
     "poster": [
@@ -18,6 +49,52 @@
         "position": [0, 2.094, 0.501],
         "size": [2, 0.45, 0.001],
         "texture": "logo.png"
+      },
+      {
+        "posterId": "poster01",
+        "position": [1.001, 1.87, 0],
+        "size": [1, 0.9, 0.001],
+        "rotation": [0, 90, 0],
+        "texture": "partner.jpg"
+      },
+      {
+        "posterId": "poster02",
+        "position": [-1.001, 1.87, 0],
+        "size": [1, 0.9, 0.001],
+        "rotation": [0, 90, 0],
+        "texture": "ai_neural.jpg"
+      },
+      {
+        "posterId": "poster03",
+        "position": [-1.038, 2.624, 0],
+        "size": [1, 0.6, 0.001],
+        "rotation": [0, 90, 0],
+        "texture": "logoSides.png",
+        "alphaMap": "logoSides_alpha.png"
+      },
+      {
+        "posterId": "poster04",
+        "position": [1.038, 2.624, 0],
+        "size": [1, 0.6, 0.001],
+        "rotation": [0, 90, 0],
+        "texture": "logoSides.png",
+        "alphaMap": "logoSides_alpha.png"
+      },
+      {
+        "posterId": "poster05",
+        "position": [0, 2.624, 0.539],
+        "size": [2, 0.6, 0.001],
+        "rotation": [0, 0, 0],
+        "texture": "linesSides.png",
+        "alphaMap": "linesSides_alpha.png"
+      },
+      {
+        "posterId": "poster06",
+        "position": [0, 2.624, -0.539],
+        "size": [2, 0.6, 0.001],
+        "rotation": [0, 0, 0],
+        "texture": "linesSides.png",
+        "alphaMap": "linesSides_alpha.png"
       }
     ]
   },
@@ -60,6 +137,76 @@
     "name": "WP-2",
     "type": "simple",
     "position": [-1.5, 0, 1.5],
+    "monitor": [
+      {
+        "screenId": "screen3",
+        "position": [0, 1.19, 0.05],
+        "size": [0.61, 0.35],
+        "texture": "screen_retail.jpg",
+        "youtubeVideoId": "kCB7b0ORbL4"
+      },
+      {
+        "screenId": "screen4",
+        "position": [0, 1.19, -0.05],
+        "size": [0.61, 0.35],
+        "texture": "screen_covid.jpg",
+        "youtubeVideoId": "lddlsQtfFCM"
+      }
+    ],
+    "poster": [
+      {
+        "posterId": "poster3",
+        "position": [0, 1.4, 0.04],
+        "size": [0.685, 1.2, 0.001],
+        "texture": "poster_retail.png"
+      },
+      {
+        "posterId": "poster4",
+        "position": [0, 1.4, -0.04],
+        "size": [0.685, 1.2, 0.001],
+        "texture": "poster_covid.png"
+      }
+    ]
+  },
+  {
+    "name": "WP-3",
+    "type": "simple",
+    "position": [1.5, 0, -1.5],
+    "monitor": [
+      {
+        "screenId": "screen3",
+        "position": [0, 1.19, 0.05],
+        "size": [0.61, 0.35],
+        "texture": "screen_retail.jpg",
+        "youtubeVideoId": "kCB7b0ORbL4"
+      },
+      {
+        "screenId": "screen4",
+        "position": [0, 1.19, -0.05],
+        "size": [0.61, 0.35],
+        "texture": "screen_covid.jpg",
+        "youtubeVideoId": "lddlsQtfFCM"
+      }
+    ],
+    "poster": [
+      {
+        "posterId": "poster3",
+        "position": [0, 1.4, 0.04],
+        "size": [0.685, 1.2, 0.001],
+        "texture": "poster_retail.png"
+      },
+      {
+        "posterId": "poster4",
+        "position": [0, 1.4, -0.04],
+        "size": [0.685, 1.2, 0.001],
+        "texture": "poster_covid.png"
+      }
+    ]
+  },
+  {
+    "name": "WP-4",
+    "type": "simple",
+    "position": [-1.5, 0, -1.5],
     "monitor": [
       {
         "screenId": "screen3",
