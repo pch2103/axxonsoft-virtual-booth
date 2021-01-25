@@ -1,5 +1,6 @@
 import React from 'react';
 import {BiMouseAlt, BiMobileAlt, BiPlayCircle} from "react-icons/bi";
+import {Lightbox} from "react-modal-image";
 
 function Info(props) {
 
@@ -29,13 +30,22 @@ function Info(props) {
 	}
 
 	return (
-			<div className={'infoPanel'}>
-				{(!props.monitorState.selected && !props.info.infoText) && decorationDefault()}
-				{(props.monitorState.selected && !props.videoPlayer.playVideo) && decorationSelected()}
-				{(props.monitorState.selected && props.videoPlayer.playVideo) && decorationPlayed()}
-				{!props.monitorState.selected && props.info.infoText}
-			</div>
-	);
+			<>
+				{ props.info.infoPic &&
+				<Lightbox
+						large={props.info.infoPic}
+						alt = {props.info.infoPic}
+						onClose = {() => props.info.setInfoPic(null)}
+				/>
+				}
+				<div className={'infoPanel'}>
+					{(!props.monitorState.selected && !props.info.infoText) && decorationDefault()}
+					{(props.monitorState.selected && !props.videoPlayer.playVideo) && decorationSelected()}
+					{(props.monitorState.selected && props.videoPlayer.playVideo) && decorationPlayed()}
+					{!props.monitorState.selected && props.info.infoText}
+				</div>
+			</>
+	)
 }
 
 export default Info;

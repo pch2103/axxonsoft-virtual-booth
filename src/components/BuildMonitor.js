@@ -8,6 +8,7 @@ function BuildMonitor({monitor, info, monitorState, videoPlayer}) {
 				monitorState={monitorState}
 				videoPlayer={videoPlayer}
 				screenId={_.screenId}
+				title={_.title || ''}
 				size={_.size}
 				position={_.position}
 				rotation = {

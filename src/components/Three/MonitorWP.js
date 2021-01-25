@@ -1,7 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react'
 import {TextureLoader} from 'three'
 import {useLoader} from 'react-three-fiber'
-import infoData from '../data/infoData'
 import {monitorMaterial} from '../data/monitorMaterial'
 
 export default function MonitorWP(props) {
@@ -21,19 +20,23 @@ export default function MonitorWP(props) {
 	const PointerOver = e => {
 		e.stopPropagation()
 		setHover(true)
-		if (infoData[props.screenId] !== props.info.infoText) props.info.setInfoText(infoData[props.screenId])
+		//if (infoData[props.screenId] !== props.info.infoText) props.info.setInfoText(infoData[props.screenId])
+		if (props.title !== props.info.infoText) props.info.setInfoText(props.title)
+		document.body.style.cursor = "pointer"
 	}
+
 	const PointerOut = e => {
 		e.stopPropagation()
 		setHover(false)
-		if (infoData.close !== props.info.infoText) props.info.setInfoText(null)
+		props.info.setInfoText(null)
+		document.body.style.cursor = "default"
 	}
 
-	const PointerClick = e => {
+	const PointerUp = e => {
 		e.stopPropagation()
 		if (clicked) {
 			props.monitorState.setActive(props.screenId)
-			props.info.setSelectedText(infoData[props.screenId])
+			props.info.setSelectedText(props.title)
 			if ((
 					selectedMonitorState !== undefined) && !(
 					selectedMonitorState.clickCounter % 2)) {
@@ -42,18 +45,19 @@ export default function MonitorWP(props) {
 			setClicked(false)
 		}
 	}
+
 	const PointerDown = e => {
 		e.stopPropagation()
 		setClicked(true)
 	}
 
 	return (
-			<group {...props} ref={ref}>
+			<group {...props} ref={ref} style={{cursor: 'pointer'}}>
 				<mesh
 							onPointerOver={PointerOver}
 							onPointerOut={PointerOut}
 							onPointerDown={PointerDown}
-							onPointerUp={PointerClick}
+							onPointerUp={PointerUp}
 				>
 					<boxBufferGeometry attach="geometry" args={[props.size[0], props.size[1], 0.015]}/>
 					<meshStandardMaterial attach="material" map={texture_video}/>

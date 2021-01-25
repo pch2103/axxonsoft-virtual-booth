@@ -6,6 +6,7 @@
     "monitor": [
       {
         "screenId": "video wall",
+        "title": "AxxonSoft & Intel",
         "position": [0, 1.40, 0.51],
         "size": [1.6, 0.9],
         "texture": "screen_main.jpg",
@@ -13,6 +14,7 @@
       },
       {
         "screenId": "screen01",
+        "title": "Neural Counter",
         "position": [-1.01, 1.2, 0],
         "size": [0.75, 0.43],
         "rotation": [0, 90, 0],
@@ -21,6 +23,7 @@
       },
       {
         "screenId": "screen02",
+        "title": "Mobotix M16 TR integration",
         "position": [1.01, 1.2, 0],
         "size": [0.75, 0.43],
         "rotation": [0, 90, 0],
@@ -29,16 +32,18 @@
       },
       {
         "screenId": "screen03",
-        "position": [0, 2.63, 0.542],
-        "size": [0.61, 0.35],
+        "title": "AxxonNet Build Your Own VSaaS",
+        "position": [0, 2.62, 0.542],
+        "size": [0.70, 0.41],
         "texture": "screen_vsaas.jpg",
         "youtubeVideoId": "HCsEB3ezoQU"
       }
     ,
       {
         "screenId": "screen04",
-        "position": [0, 2.63, -0.542],
-        "size": [0.61, 0.35],
+        "title": "Axxon Next 4.4: Think Intelligence.",
+        "position": [0, 2.62, -0.542],
+        "size": [0.70, 0.41],
         "texture": "screen_vms.jpg",
         "youtubeVideoId": "ag2BmGN9u5I"
       }
@@ -101,10 +106,11 @@
   {
     "name": "WP-1",
     "type": "simple",
-    "position": [1.5, 0, 1.5],
+    "position": [1.7, 0, 1.5],
     "monitor": [
       {
         "screenId": "screen1",
+        "title": "AxxonSoft Webinars",
         "position": [0, 1.19, 0.05],
         "size": [0.61, 0.35],
         "texture": "screen_webinar.jpg",
@@ -112,6 +118,7 @@
       },
       {
         "screenId": "screen2",
+        "title": "Build your own VSaaS",
         "position": [0, 1.19, -0.05],
         "size": [0.61, 0.35],
         "texture": "screen_net.jpg",
@@ -136,10 +143,11 @@
   {
     "name": "WP-2",
     "type": "simple",
-    "position": [-1.5, 0, 1.5],
+    "position": [-1.7, 0, 1.5],
     "monitor": [
       {
         "screenId": "screen3",
+        "title": "Retail",
         "position": [0, 1.19, 0.05],
         "size": [0.61, 0.35],
         "texture": "screen_retail.jpg",
@@ -147,6 +155,7 @@
       },
       {
         "screenId": "screen4",
+        "title": "Stop COVID-19",
         "position": [0, 1.19, -0.05],
         "size": [0.61, 0.35],
         "texture": "screen_covid.jpg",
@@ -171,70 +180,74 @@
   {
     "name": "WP-3",
     "type": "simple",
-    "position": [1.5, 0, -1.5],
+    "position": [-1.7, 0, -1.5],
     "monitor": [
       {
-        "screenId": "screen3",
+        "screenId": "screen5",
+        "title": "ATM tampering detection",
         "position": [0, 1.19, 0.05],
         "size": [0.61, 0.35],
-        "texture": "screen_retail.jpg",
-        "youtubeVideoId": "kCB7b0ORbL4"
+        "texture": "screen_atm.jpg",
+        "youtubeVideoId": "EXAZ0aeoa08"
       },
       {
-        "screenId": "screen4",
+        "screenId": "screen6",
+        "title": "AI Face Mask detector",
         "position": [0, 1.19, -0.05],
         "size": [0.61, 0.35],
-        "texture": "screen_covid.jpg",
-        "youtubeVideoId": "lddlsQtfFCM"
+        "texture": "screen_mask.jpg",
+        "youtubeVideoId": "_phJUS-mAto"
       }
     ],
     "poster": [
       {
-        "posterId": "poster3",
+        "posterId": "poster5",
         "position": [0, 1.4, 0.04],
         "size": [0.685, 1.2, 0.001],
-        "texture": "poster_retail.png"
+        "texture": "poster_atm.png"
       },
       {
-        "posterId": "poster4",
+        "posterId": "poster6",
         "position": [0, 1.4, -0.04],
         "size": [0.685, 1.2, 0.001],
-        "texture": "poster_covid.png"
+        "texture": "poster_mask.png"
       }
     ]
   },
   {
     "name": "WP-4",
     "type": "simple",
-    "position": [-1.5, 0, -1.5],
+    "position": [1.7, 0, -1.5],
     "monitor": [
       {
-        "screenId": "screen3",
+        "screenId": "screen7",
+        "title": "Integration with thermal cameras",
         "position": [0, 1.19, 0.05],
         "size": [0.61, 0.35],
-        "texture": "screen_retail.jpg",
-        "youtubeVideoId": "kCB7b0ORbL4"
+        "texture": "screen_intellect.jpg",
+        "youtubeVideoId": "TlLCtmE32-0"
       },
       {
-        "screenId": "screen4",
+        "screenId": "screen8",
+        "title": "AI Personal Protective Equipment",
         "position": [0, 1.19, -0.05],
         "size": [0.61, 0.35],
-        "texture": "screen_covid.jpg",
-        "youtubeVideoId": "lddlsQtfFCM"
+        "texture": "screen_ppe.jpg",
+        "youtubeVideoId": "x1fknHgvPJY"
       }
     ],
     "poster": [
       {
-        "posterId": "poster3",
+        "posterId": "poster7",
         "position": [0, 1.4, 0.04],
         "size": [0.685, 1.2, 0.001],
-        "texture": "poster_retail.png"
+        "texture": "poster_intellect.png"
       },
       {
-        "posterId": "poster4",
+        "posterId": "poster8",
         "position": [0, 1.4, -0.04],
         "size": [0.685, 1.2, 0.001],
-        "texture": "poster_covid.png"
+        "texture": "poster_ppe.png"
       }
     ]
   }

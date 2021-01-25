@@ -24,7 +24,7 @@ const App = () => {
 						invalidateFrameloop
 						colorManagement
 						shadowMap
-						camera={{position: [2, 2, 5], near: 1, fov: 55}}
+						camera={{position: [6, 4, 6], near: 1, fov: 35}}
 				>
 					<Suspense fallback={null}>
 						<OrbitControls

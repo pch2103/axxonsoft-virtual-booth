@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import YouTube from 'react-youtube';
-import {FiX} from "react-icons/fi";
+import {BiArrowBack} from "react-icons/bi";
 
 function VideoWindow({videoPlayer, ...props}) {
 	const [play, setPlay] = useState(false)
@@ -35,8 +35,8 @@ function VideoWindow({videoPlayer, ...props}) {
 				<div className={'videoBack'}>
 					<div className={'videoButtonWrapper'}>
 						<div className={'closeButton'} onClick={handlerBackClick}>
-							<span className={'btn'}><FiX/></span>&nbsp;
-							<span>CLOSE</span>
+							<span className={'btn'}><BiArrowBack/></span>&nbsp;
+							<span>Back to booth</span>
 						</div>
 					</div>
 					<YouTube
