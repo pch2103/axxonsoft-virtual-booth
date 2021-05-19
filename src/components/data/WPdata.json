@@ -250,5 +250,79 @@
         "texture": "poster_ppe.png"
       }
     ]
+  },
+  {
+    "name": "WP-5",
+    "type": "simple",
+    "position": [2.6, 0, 0],
+    "monitor": [
+      {
+        "screenId": "screen51",
+        "title": "Integration with thermal cameras",
+        "position": [0, 1.19, 0.05],
+        "size": [0.61, 0.35],
+        "texture": "screen_intellect.jpg",
+        "youtubeVideoId": "TlLCtmE32-0"
+      },
+      {
+        "screenId": "screen52",
+        "title": "AI Personal Protective Equipment",
+        "position": [0, 1.19, -0.05],
+        "size": [0.61, 0.35],
+        "texture": "screen_ppe.jpg",
+        "youtubeVideoId": "x1fknHgvPJY"
+      }
+    ],
+    "poster": [
+      {
+        "posterId": "poster51",
+        "position": [0, 1.4, 0.04],
+        "size": [0.685, 1.2, 0.001],
+        "texture": "poster_intellect.png"
+      },
+      {
+        "posterId": "poster52",
+        "position": [0, 1.4, -0.04],
+        "size": [0.685, 1.2, 0.001],
+        "texture": "poster_ppe.png"
+      }
+    ]
+  },
+  {
+    "name": "WP-6",
+    "type": "simple",
+    "position": [-2.6, 0, 0],
+    "monitor": [
+      {
+        "screenId": "screen61",
+        "title": "Integration with thermal cameras",
+        "position": [0, 1.19, 0.05],
+        "size": [0.61, 0.35],
+        "texture": "screen_intellect.jpg",
+        "youtubeVideoId": "TlLCtmE32-0"
+      },
+      {
+        "screenId": "screen62",
+        "title": "AI Personal Protective Equipment",
+        "position": [0, 1.19, -0.05],
+        "size": [0.61, 0.35],
+        "texture": "screen_ppe.jpg",
+        "youtubeVideoId": "x1fknHgvPJY"
+      }
+    ],
+    "poster": [
+      {
+        "posterId": "poster61",
+        "position": [0, 1.4, 0.04],
+        "size": [0.685, 1.2, 0.001],
+        "texture": "poster_intellect.png"
+      },
+      {
+        "posterId": "poster62",
+        "position": [0, 1.4, -0.04],
+        "size": [0.685, 1.2, 0.001],
+        "texture": "poster_ppe.png"
+      }
+    ]
   }
 ]
