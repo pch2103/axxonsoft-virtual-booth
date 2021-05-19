@@ -258,18 +258,18 @@
     "monitor": [
       {
         "screenId": "screen51",
-        "title": "Integration with thermal cameras",
+        "title": "Intel",
         "position": [0, 1.19, 0.05],
         "size": [0.61, 0.35],
-        "texture": "screen_intellect.jpg",
+        "texture": "screen_intel.png",
         "youtubeVideoId": "TlLCtmE32-0"
       },
       {
         "screenId": "screen52",
-        "title": "AI Personal Protective Equipment",
+        "title": "Seagate",
         "position": [0, 1.19, -0.05],
         "size": [0.61, 0.35],
-        "texture": "screen_ppe.jpg",
+        "texture": "screen_seagate.png",
         "youtubeVideoId": "x1fknHgvPJY"
       }
     ],
@@ -278,13 +278,13 @@
         "posterId": "poster51",
         "position": [0, 1.4, 0.04],
         "size": [0.685, 1.2, 0.001],
-        "texture": "poster_intellect.png"
+        "texture": "poster-intel.png"
       },
       {
         "posterId": "poster52",
         "position": [0, 1.4, -0.04],
         "size": [0.685, 1.2, 0.001],
-        "texture": "poster_ppe.png"
+        "texture": "poster-seagate.png"
       }
     ]
   },
@@ -295,18 +295,18 @@
     "monitor": [
       {
         "screenId": "screen61",
-        "title": "Integration with thermal cameras",
+        "title": "Dell",
         "position": [0, 1.19, 0.05],
         "size": [0.61, 0.35],
-        "texture": "screen_intellect.jpg",
+        "texture": "screen_dell.png",
         "youtubeVideoId": "TlLCtmE32-0"
       },
       {
         "screenId": "screen62",
-        "title": "AI Personal Protective Equipment",
+        "title": "Intel",
         "position": [0, 1.19, -0.05],
         "size": [0.61, 0.35],
-        "texture": "screen_ppe.jpg",
+        "texture": "screen_intel.png",
         "youtubeVideoId": "x1fknHgvPJY"
       }
     ],
@@ -315,13 +315,13 @@
         "posterId": "poster61",
         "position": [0, 1.4, 0.04],
         "size": [0.685, 1.2, 0.001],
-        "texture": "poster_intellect.png"
+        "texture": "poster-dell.png"
       },
       {
         "posterId": "poster62",
         "position": [0, 1.4, -0.04],
         "size": [0.685, 1.2, 0.001],
-        "texture": "poster_ppe.png"
+        "texture": "poster-intel.png"
       }
     ]
   }
