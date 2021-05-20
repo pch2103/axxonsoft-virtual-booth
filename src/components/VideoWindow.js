@@ -19,6 +19,7 @@ function VideoWindow({videoPlayer, ...props}) {
 		return () => {
 			document.removeEventListener("keydown", escFunction, false);
 		};
+		// eslint-disable-next-line
 			}, []
 	)
 
