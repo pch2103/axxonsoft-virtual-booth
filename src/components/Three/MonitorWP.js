@@ -6,6 +6,8 @@ import {monitorMaterial} from '../data/monitorMaterial'
 export default function MonitorWP(props) {
 	const ref = useRef(null);
 	const texture_video = useLoader(TextureLoader, props.texture);
+	const texture_playIcon_NO = useLoader(TextureLoader, '/play_screen_no.png');
+	const texture_playIconAlpha_NO = useLoader(TextureLoader, '/play_alpha_no.png');
 	const texture_playIcon = useLoader(TextureLoader, '/play_screen.png');
 	const texture_playIconAlpha = useLoader(TextureLoader, '/play_alpha.png');
 	const selectedMonitorState = props.monitorState.getMonitorState(props.screenId)
@@ -54,10 +56,10 @@ export default function MonitorWP(props) {
 	return (
 			<group {...props} ref={ref} style={{cursor: 'pointer'}}>
 				<mesh
-							onPointerOver={PointerOver}
-							onPointerOut={PointerOut}
-							onPointerDown={PointerDown}
-							onPointerUp={PointerUp}
+						onPointerOver={PointerOver}
+						onPointerOut={PointerOut}
+						onPointerDown={PointerDown}
+						onPointerUp={PointerUp}
 				>
 					<boxBufferGeometry attach="geometry" args={[props.size[0], props.size[1], 0.015]}/>
 					<meshStandardMaterial attach="material" map={texture_video}/>
@@ -70,13 +72,23 @@ export default function MonitorWP(props) {
 					<boxBufferGeometry attach="geometry" args={[props.size[0] + 0.04, props.size[1] + 0.04, 0.010]}/>
 				</mesh>
 				}
-				{(
-						selectedMonitorState !== undefined) && selectedMonitorState.active &&
-				<mesh>
-					<boxBufferGeometry attach="geometry" args={[props.size[0], props.size[1], 0.015]}/>
-					<meshStandardMaterial attach="material" map={texture_playIcon} alphaMap={texture_playIconAlpha}
-																transparent={true}/>
-				</mesh>
+				{
+					(selectedMonitorState !== undefined && selectedMonitorState.active ) &&
+					<mesh>
+						<boxBufferGeometry attach="geometry" args={[props.size[0], props.size[1], 0.015]}/>
+						<meshStandardMaterial attach="material" map={texture_playIcon}
+																	alphaMap={texture_playIconAlpha}
+																	transparent={true}/>
+					</mesh>
+				}
+				{
+					((selectedMonitorState === undefined) || (!selectedMonitorState.active)) &&
+					<mesh>
+						<boxBufferGeometry attach="geometry" args={[props.size[0], props.size[1], 0.015]}/>
+						<meshStandardMaterial attach="material" map={texture_playIcon_NO}
+																	alphaMap={texture_playIconAlpha_NO}
+																	transparent={true}/>
+					</mesh>
 				}
 			</group>
 	);

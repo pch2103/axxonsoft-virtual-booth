@@ -13,6 +13,14 @@ function VideoWindow({videoPlayer, ...props}) {
 			start: 0
 		},
 	};
+	useEffect(() => {
+		document.addEventListener("keydown", escFunction, false);
+
+		return () => {
+			document.removeEventListener("keydown", escFunction, false);
+		};
+			}, []
+	)
 
 	useEffect(() => {
 				if (videoPlayer.playVideo) {
@@ -21,6 +29,15 @@ function VideoWindow({videoPlayer, ...props}) {
 				// eslint-disable-next-line
 			}, [videoPlayer.playVideo]
 	)
+
+	const escFunction = e => {
+		if (e.keyCode === 27) {
+			videoPlayer.setPlayVideo(null)
+			props.info.setInfoText(null)
+			props.monitorState.setSelected(false)
+			setPlay(false)
+		}
+	}
 
 	const handlerBackClick = e => {
 		e.preventDefault()

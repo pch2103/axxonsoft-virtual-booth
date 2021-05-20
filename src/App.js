@@ -39,8 +39,8 @@ const App = () => {
 								panSpeed={0.4}
 								minPolarAngle={Math.PI / 4}
 								maxPolarAngle={Math.PI / 2}
-								minDistance={-500}
-								maxDistance={1000}
+								minDistance={4}
+								maxDistance={17}
 						/>
 
 						<Lights/>
