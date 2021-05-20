@@ -9,7 +9,7 @@ function VideoWindow({videoPlayer, ...props}) {
 			// https://developers.google.com/youtube/player_parameters
 			autoplay: 1,
 			showinfo: 0,
-			controls: 0,
+			controls: 1,
 			start: 0
 		},
 	};
@@ -32,6 +32,7 @@ function VideoWindow({videoPlayer, ...props}) {
 	)
 
 	const escFunction = e => {
+		e.preventDefault()
 		if (e.keyCode === 27) {
 			videoPlayer.setPlayVideo(null)
 			props.info.setInfoText(null)
