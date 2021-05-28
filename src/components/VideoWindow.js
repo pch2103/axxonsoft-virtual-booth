@@ -13,17 +13,9 @@ function VideoWindow({videoPlayer, ...props}) {
 			start: 0
 		},
 	};
+
 	useEffect(() => {
 		document.addEventListener("keydown", escFunction, false);
-
-		return () => {
-			document.removeEventListener("keydown", escFunction, false);
-		};
-		// eslint-disable-next-line
-			}, []
-	)
-
-	useEffect(() => {
 				if (videoPlayer.playVideo) {
 					setPlay(true)
 				}
@@ -38,6 +30,7 @@ function VideoWindow({videoPlayer, ...props}) {
 			props.info.setInfoText(null)
 			props.monitorState.setSelected(false)
 			setPlay(false)
+			document.removeEventListener("keydown", escFunction, false);
 		}
 	}
 
@@ -47,6 +40,7 @@ function VideoWindow({videoPlayer, ...props}) {
 		props.info.setInfoText(null)
 		props.monitorState.setSelected(false)
 		setPlay(false)
+		document.removeEventListener("keydown", escFunction, false);
 	}
 
 	return <>
