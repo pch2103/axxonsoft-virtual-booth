@@ -54,8 +54,6 @@ export default function MainBooth(props) {
 				<BuildMonitor {...props}/>
 				<BuildPoster {...props}/>
 
-
-
 				<mesh position={[0, 1.29, -0.43]}
 							onPointerOver={MapOver}
 							onPointerOut={MapOut}
