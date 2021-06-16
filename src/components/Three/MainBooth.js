@@ -58,7 +58,7 @@ export default function MainBooth(props) {
 				<BuildMonitor {...props}/>
 				<BuildPoster {...props}/>
 
-				<mesh position={[0, 1.29, -0.43]}
+				<mesh position={[0, 1.29, -0.45]}
 							onPointerOver={MapOver}
 							onPointerOut={MapOut}
 							onPointerDown={MapDown}
@@ -79,7 +79,7 @@ export default function MainBooth(props) {
 				</mesh>
 
 				{ mapSelected &&
-				<mesh position={[0, 1.29, -0.44]}>
+				<mesh position={[0, 1.29, -0.45]}>
 					<boxBufferGeometry attach="geometry" args={[1.35, 1.35, 0.01]}/>
 						<meshStandardMaterial attach="material" map={enlargeTexture} transparent alphaMap={enlargeAlphaTexture}/>
 				</mesh>
