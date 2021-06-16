@@ -10,7 +10,7 @@
         "position": [0, 1.40, 0.51],
         "size": [1.6, 0.9],
         "texture": "screen_main.jpg",
-        "youtubeVideoId": "bXvjokwKM_s"
+        "youtubeVideoId": "lh6bBHOuIGs"
       },
       {
         "screenId": "screen01",
@@ -32,20 +32,20 @@
       },
       {
         "screenId": "screen03",
-        "title": "AxxonNet Build Your Own VSaaS",
+        "title": "AxxonSoft On Air online show promo",
         "position": [0, 2.62, 0.542],
         "size": [0.70, 0.41],
-        "texture": "screen_vsaas.jpg",
-        "youtubeVideoId": "HCsEB3ezoQU"
+        "texture": "screen_main_top.jpg",
+        "youtubeVideoId": "dDgRIwioe38"
       }
     ,
       {
         "screenId": "screen04",
-        "title": "Axxon Next 4.4: Think Intelligence.",
+        "title": "Axxon Next 4.5 new features",
         "position": [0, 2.62, -0.542],
         "size": [0.70, 0.41],
-        "texture": "screen_vms.jpg",
-        "youtubeVideoId": "ag2BmGN9u5I"
+        "texture": "screen_top_back.jpg",
+        "youtubeVideoId": "ocmt3banVdc"
       }
     ],
     "poster": [
@@ -110,19 +110,19 @@
     "monitor": [
       {
         "screenId": "screen1",
-        "title": "AxxonSoft Webinars",
+        "title": "Axxon VSaaS Datacenter solution",
         "position": [0, 1.19, 0.05],
         "size": [0.61, 0.35],
-        "texture": "screen_webinar.jpg",
-        "youtubeVideoId": "cAd5fBKqHH0"
+        "texture": "screen_wp-1_front.jpg",
+        "youtubeVideoId": "0O0jiy4YXXQ"
       },
       {
         "screenId": "screen2",
-        "title": "Build your own VSaaS",
+        "title": "New mobile app",
         "position": [0, 1.19, -0.05],
         "size": [0.61, 0.35],
-        "texture": "screen_net.jpg",
-        "youtubeVideoId": "EfTDtu1O0TU"
+        "texture": "screen_wp-1_back.jpg",
+        "youtubeVideoId": "5S8TsoX7DHI"
       }
     ],
     "poster": [
@@ -130,13 +130,13 @@
         "posterId": "poster1",
         "position": [0, 1.4, 0.04],
         "size": [0.685, 1.2, 0.001],
-        "texture": "poster_webinar.png"
+        "texture": "poster_wp-1_front.png"
       },
       {
         "posterId": "poster2",
         "position": [0, 1.4, -0.04],
         "size": [0.685, 1.2, 0.001],
-        "texture": "poster_net.png"
+        "texture": "poster_wp-1_back.png"
       }
     ]
   },
@@ -147,11 +147,11 @@
     "monitor": [
       {
         "screenId": "screen3",
-        "title": "Retail",
+        "title": "AI Video Analytics. Axxon Next VMS",
         "position": [0, 1.19, 0.05],
         "size": [0.61, 0.35],
-        "texture": "screen_retail.jpg",
-        "youtubeVideoId": "kCB7b0ORbL4"
+        "texture": "screen_wp-2_front.jpg",
+        "youtubeVideoId": "BtNXA40lZaA"
       },
       {
         "screenId": "screen4",
@@ -167,7 +167,7 @@
         "posterId": "poster3",
         "position": [0, 1.4, 0.04],
         "size": [0.685, 1.2, 0.001],
-        "texture": "poster_retail.png"
+        "texture": "poster_wp-2_front.png"
       },
       {
         "posterId": "poster4",
@@ -184,19 +184,19 @@
     "monitor": [
       {
         "screenId": "screen5",
-        "title": "ATM tampering detection",
+        "title": "Retail",
         "position": [0, 1.19, 0.05],
         "size": [0.61, 0.35],
-        "texture": "screen_atm.jpg",
-        "youtubeVideoId": "EXAZ0aeoa08"
+        "texture": "screen_retail.jpg",
+        "youtubeVideoId": "kCB7b0ORbL4"
       },
       {
         "screenId": "screen6",
-        "title": "AI Face Mask detector",
+        "title": "AxxonSoft at Mexico City International Airport",
         "position": [0, 1.19, -0.05],
         "size": [0.61, 0.35],
-        "texture": "screen_mask.jpg",
-        "youtubeVideoId": "_phJUS-mAto"
+        "texture": "screen_wp-3_back.jpg",
+        "youtubeVideoId": "y7We2hkmYrE"
       }
     ],
     "poster": [
@@ -204,13 +204,13 @@
         "posterId": "poster5",
         "position": [0, 1.4, 0.04],
         "size": [0.685, 1.2, 0.001],
-        "texture": "poster_atm.png"
+        "texture": "poster_retail.png"
       },
       {
         "posterId": "poster6",
         "position": [0, 1.4, -0.04],
         "size": [0.685, 1.2, 0.001],
-        "texture": "poster_mask.png"
+        "texture": "poster_wp-3_back.png"
       }
     ]
   },
@@ -221,18 +221,18 @@
     "monitor": [
       {
         "screenId": "screen7",
-        "title": "Integration with thermal cameras",
+        "title": "Axxon Intellect AI Analytics",
         "position": [0, 1.19, 0.05],
         "size": [0.61, 0.35],
-        "texture": "screen_intellect.jpg",
-        "youtubeVideoId": "TlLCtmE32-0"
+        "texture": "screen_wp-4_front.jpg",
+        "youtubeVideoId": "KadXQ4BXkYA"
       },
       {
         "screenId": "screen8",
-        "title": "AI Personal Protective Equipment",
+        "title": "Axxon Next 4.5 VMS new features",
         "position": [0, 1.19, -0.05],
         "size": [0.61, 0.35],
-        "texture": "screen_ppe.jpg",
+        "texture": "screen_wp-4_back.jpg",
         "youtubeVideoId": "x1fknHgvPJY"
       }
     ],
@@ -241,13 +241,13 @@
         "posterId": "poster7",
         "position": [0, 1.4, 0.04],
         "size": [0.685, 1.2, 0.001],
-        "texture": "poster_intellect.png"
+        "texture": "poster_wp-4_front.png"
       },
       {
         "posterId": "poster8",
         "position": [0, 1.4, -0.04],
         "size": [0.685, 1.2, 0.001],
-        "texture": "poster_ppe.png"
+        "texture": "poster_wp-4_back.png"
       }
     ]
   },
@@ -258,19 +258,19 @@
     "monitor": [
       {
         "screenId": "screen51",
-        "title": "Intel",
+        "title": "AxxonSoft & Intel technologies to build value-added AI-powered surveillance and security solutions",
         "position": [0, 1.19, 0.05],
         "size": [0.61, 0.35],
         "texture": "screen_intel.jpg",
-        "youtubeVideoId": "TlLCtmE32-0"
+        "youtubeVideoId": "ocmt3banVdc"
       },
       {
         "screenId": "screen52",
-        "title": "Seagate",
+        "title": "Blockbuster Mall",
         "position": [0, 1.19, -0.05],
         "size": [0.61, 0.35],
-        "texture": "screen_seagate.png",
-        "youtubeVideoId": "x1fknHgvPJY"
+        "texture": "screen_wp-5_back.jpg",
+        "youtubeVideoId": "iZ6NoLEqqkQ"
       }
     ],
     "poster": [
@@ -284,7 +284,7 @@
         "posterId": "poster52",
         "position": [0, 1.4, -0.04],
         "size": [0.685, 1.2, 0.001],
-        "texture": "poster-seagate.png"
+        "texture": "poster_wp-5_back.png"
       }
     ]
   },
@@ -295,19 +295,19 @@
     "monitor": [
       {
         "screenId": "screen61",
-        "title": "Dell",
+        "title": "Seagate",
         "position": [0, 1.19, 0.05],
         "size": [0.61, 0.35],
-        "texture": "screen_dell.jpg",
-        "youtubeVideoId": "TlLCtmE32-0"
+        "texture": "screen_wp-6_front.jpg",
+        "youtubeVideoId": "MTyuOMH-oYM"
       },
       {
         "screenId": "screen62",
-        "title": "Intel",
+        "title": "Behavior AI Analytics",
         "position": [0, 1.19, -0.05],
         "size": [0.61, 0.35],
-        "texture": "screen_intel.jpg",
-        "youtubeVideoId": "x1fknHgvPJY"
+        "texture": "screen_wp-6_back.jpg",
+        "youtubeVideoId": "iRV2aCj4mks"
       }
     ],
     "poster": [
@@ -315,13 +315,13 @@
         "posterId": "poster61",
         "position": [0, 1.4, 0.04],
         "size": [0.685, 1.2, 0.001],
-        "texture": "poster-dell.png"
+        "texture": "poster_wp-6_front.png"
       },
       {
         "posterId": "poster62",
         "position": [0, 1.4, -0.04],
         "size": [0.685, 1.2, 0.001],
-        "texture": "poster-intel.png"
+        "texture": "poster_wp-6_back.png"
       }
     ]
   }
