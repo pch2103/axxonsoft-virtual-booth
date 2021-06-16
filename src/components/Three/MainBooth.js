@@ -46,6 +46,10 @@ export default function MainBooth(props) {
 		}
 	}
 
+	const DummyAction = e => {
+		e.stopPropagation()
+	}
+
 	return (
 			<>
 
@@ -63,6 +67,17 @@ export default function MainBooth(props) {
 					<boxBufferGeometry attach="geometry" args={[1.81, 1.81, 0.01]}/>
 					<meshPhongMaterial attach="material" map={mapTexture}/>
 				</mesh>
+
+				<mesh position={[0, 1.45, 0]}
+							onPointerOver={DummyAction}
+							onPointerOut={DummyAction}
+							onPointerDown={DummyAction}
+							onPointerUp={DummyAction}
+				>
+					<boxBufferGeometry attach="geometry" args={[1.9, 2.9, 0.8]}/>
+					<meshBasicMaterial attach="material" color="#fff"/>
+				</mesh>
+
 				{ mapSelected &&
 				<mesh position={[0, 1.29, -0.44]}>
 					<boxBufferGeometry attach="geometry" args={[1.35, 1.35, 0.01]}/>

@@ -23,12 +23,12 @@
       },
       {
         "screenId": "screen02",
-        "title": "Mobotix M16 TR integration",
+        "title": "21st FIFA World Cup",
         "position": [1.01, 1.2, 0],
         "size": [0.75, 0.43],
         "rotation": [0, 90, 0],
-        "texture": "screen_mobotix.jpg",
-        "youtubeVideoId": "JqHnobsSLvI"
+        "texture": "screen_fifa.jpg",
+        "youtubeVideoId": "gVaAA1CkV6E"
       },
       {
         "screenId": "screen03",

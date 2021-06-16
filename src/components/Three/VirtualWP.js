@@ -8,11 +8,25 @@ export default function VirtualWP(props) {
 	const ref = useRef(null)
 	const {nodes, materials} = useGLTF('../../../virtualWP.glb')
 
+	const DummyAction = e => {
+		e.stopPropagation()
+	}
+
 	return (
 				<group ref={ref} {...props} dispose={null}>
 
 					<BuildMonitor {...props}/>
 					<BuildPoster {...props}/>
+
+					<mesh position={[0, 1, 0]}
+								onPointerOver={DummyAction}
+								onPointerOut={DummyAction}
+								onPointerDown={DummyAction}
+								onPointerUp={DummyAction}
+					>
+						<boxBufferGeometry attach="geometry" args={[0.65, 1.9, 0.01]}/>
+						<meshBasicMaterial attach="material" color="#fff"/>
+					</mesh>
 
 					<group position={[0.27, 1.965, 0.21]}>
 						<mesh material={materials.Metall} geometry={nodes.Torus.geometry} position={[0, 0, 0]}/>
