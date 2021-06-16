@@ -6,7 +6,7 @@
     "monitor": [
       {
         "screenId": "video wall",
-        "title": "AxxonSoft & Intel",
+        "title": "Sessions Live Streaming",
         "position": [0, 1.40, 0.51],
         "size": [1.6, 0.9],
         "texture": "screen_main.jpg",
@@ -45,7 +45,7 @@
         "position": [0, 2.62, -0.542],
         "size": [0.70, 0.41],
         "texture": "screen_top_back.jpg",
-        "youtubeVideoId": "ocmt3banVdc"
+        "youtubeVideoId": "1f9L7xzu7MU"
       }
     ],
     "poster": [
