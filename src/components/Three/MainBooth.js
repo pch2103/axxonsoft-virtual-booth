@@ -11,6 +11,8 @@ export default function MainBooth(props) {
 	const mapTexture = useLoader(TextureLoader, '../../../officeMap.jpg');
 	const enlargeTexture = useLoader(TextureLoader, '../../../enlarge.png');
 	const enlargeAlphaTexture = useLoader(TextureLoader, '../../../enlarge_alpha.png');
+	const enlargeTextureNormal = useLoader(TextureLoader, '../../../enlarge-normal.png');
+	const enlargeAlphaTextureNormal = useLoader(TextureLoader, '../../../enlarge-normal-alpha.png');
 
 	const [mapOver, setMapOver] = useState(false)
 	const [mapClicked, setMapClicked] = useState(false)
@@ -77,7 +79,12 @@ export default function MainBooth(props) {
 					<boxBufferGeometry attach="geometry" args={[1.9, 2.9, 0.8]}/>
 					<meshBasicMaterial attach="material" color="#fff"/>
 				</mesh>
-
+				{ !mapSelected &&
+				<mesh position={[0, 1.29, -0.45]}>
+					<boxBufferGeometry attach="geometry" args={[1.35, 1.35, 0.01]}/>
+					<meshStandardMaterial attach="material" map={enlargeTextureNormal} transparent alphaMap={enlargeAlphaTextureNormal}/>
+				</mesh>
+				}
 				{ mapSelected &&
 				<mesh position={[0, 1.29, -0.45]}>
 					<boxBufferGeometry attach="geometry" args={[1.35, 1.35, 0.01]}/>
