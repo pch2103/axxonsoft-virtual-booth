@@ -44,7 +44,7 @@ function VideoWindow({videoPlayer, ...props}) {
 	}
 
 	return <>
-		{play && (
+		{videoPlayer.playVideo && play && (
 				<div className={'videoBack'}>
 					<div className={'videoButtonWrapper'}>
 						<div className={'closeButton'} onClick={handlerBackClick}>

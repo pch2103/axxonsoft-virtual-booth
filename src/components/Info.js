@@ -17,7 +17,7 @@ function Info(props) {
 			&nbsp;{props.info.selectedText}
 			&nbsp;&#8212;&nbsp;
 			<span className={'selectedText'}>
-				Click again to Watch Video
+				Click again to Play
 			</span>
 		</>
 	}

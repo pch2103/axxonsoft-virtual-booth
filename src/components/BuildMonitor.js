@@ -2,7 +2,7 @@ import React from 'react';
 import MonitorWP from "./Three/MonitorWP";
 
 function BuildMonitor({monitor, info, monitorState, videoPlayer}) {
-	const Monitors = monitor.map((_) => {
+	return  monitor.map((_) => {
 		return <MonitorWP
 				info={info}
 				monitorState={monitorState}
@@ -18,11 +18,10 @@ function BuildMonitor({monitor, info, monitorState, videoPlayer}) {
 				}
 				texture={`/${_.texture}`}
 				youtubeVideoId={_.youtubeVideoId}
+				link={_.link}
 				key={_.screenId}
 		/>
 	})
-
-	return Monitors
 }
 
 export default BuildMonitor;

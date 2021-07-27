@@ -6,11 +6,11 @@
     "monitor": [
       {
         "screenId": "video wall",
-        "title": "Sessions Live Streaming",
+        "title": "Sessions-on-Demand",
         "position": [0, 1.40, 0.51],
         "size": [1.6, 0.9],
         "texture": "screen_main.jpg",
-        "youtubeVideoId": "dRbpsY1LeeI"
+        "link": " https://on-air.axxonsoft.com/?utm_source=onair&utm_medium=banner&utm_campaign=onair#sessions"
       },
       {
         "screenId": "screen01",
@@ -118,11 +118,11 @@
       },
       {
         "screenId": "screen2",
-        "title": "New mobile app",
+        "title": "Privacy Masking",
         "position": [0, 1.19, -0.05],
         "size": [0.61, 0.35],
         "texture": "screen_wp-1_back.jpg",
-        "youtubeVideoId": "5S8TsoX7DHI"
+        "youtubeVideoId": "QQNzHfLNOSA"
       }
     ],
     "poster": [
@@ -233,7 +233,7 @@
         "position": [0, 1.19, -0.05],
         "size": [0.61, 0.35],
         "texture": "screen_wp-4_back.jpg",
-        "youtubeVideoId": "lKhG5WNt-z8"
+        "youtubeVideoId": "ixHawmGelRA"
       }
     ],
     "poster": [
@@ -307,7 +307,7 @@
         "position": [0, 1.19, -0.05],
         "size": [0.61, 0.35],
         "texture": "screen_wp-6_back.jpg",
-        "youtubeVideoId": "iRV2aCj4mks"
+        "youtubeVideoId": "EpNfdxWQSdE"
       }
     ],
     "poster": [
