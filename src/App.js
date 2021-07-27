@@ -24,12 +24,12 @@ const App = () => {
 						invalidateFrameloop
 						colorManagement
 						shadowMap
-						camera={{position: [6, 4, 6], near: 1, fov: 35}}
+						camera={{position: [0, -1, 7], near: 1, fov: 35}}
 				>
 					<Suspense fallback={null}>
 						<OrbitControls
 								enableDamping={true}
-								target={[0, 1, 0]}
+								target={[0, 1.2, 0]}
 								dampingFactor={0.25}
 								rotateSpeed={0.4}
 								keyPanSpeed={0.4}
