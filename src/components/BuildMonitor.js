@@ -2,7 +2,7 @@ import React from 'react';
 import MonitorWP from "./Three/MonitorWP";
 
 function BuildMonitor({monitor, info, monitorState, videoPlayer}) {
-	return  monitor.map((_) => {
+	return monitor.map((_) => {
 		return <MonitorWP
 				info={info}
 				monitorState={monitorState}

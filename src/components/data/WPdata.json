@@ -3,6 +3,19 @@
     "name": "iscWest_model",
     "type": "main",
     "position": [0, 0, 0],
+    "button": [
+      {
+        "buttonId": "button01",
+        "position": [0, 2.624, 0.539],
+        "size": [1.5, 0.25, 0.001],
+        "rotation": [0, 0, 0],
+        "texture": "button-1.png",
+        "alphaMap": "button-1-alpha.png",
+        "textureHover": "button-1-hover.png",
+        "alphaMapHover": "button-1-alpha-hover.png",
+        "link": "https://axxonsoft.com/webinars/?utm_source=onair&utm_medium=banner&utm_campaign=onair#wbtopics"
+      }
+    ],
     "monitor": [
       {
         "screenId": "video wall",
@@ -30,15 +43,6 @@
         "texture": "screen_fifa.jpg",
         "youtubeVideoId": "gVaAA1CkV6E"
       },
-      {
-        "screenId": "screen03",
-        "title": "AxxonSoft On Air online show promo",
-        "position": [0, 2.62, 0.542],
-        "size": [0.70, 0.41],
-        "texture": "screen_main_top.jpg",
-        "youtubeVideoId": "dDgRIwioe38"
-      }
-    ,
       {
         "screenId": "screen04",
         "title": "Axxon Next 4.5 new features",
@@ -85,14 +89,7 @@
         "texture": "logoSides.png",
         "alphaMap": "logoSides_alpha.png"
       },
-      {
-        "posterId": "poster05",
-        "position": [0, 2.624, 0.539],
-        "size": [2, 0.6, 0.001],
-        "rotation": [0, 0, 0],
-        "texture": "linesSides.png",
-        "alphaMap": "linesSides_alpha.png"
-      },
+
       {
         "posterId": "poster06",
         "position": [0, 2.624, -0.539],

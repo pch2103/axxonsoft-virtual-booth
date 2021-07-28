@@ -19,6 +19,7 @@ function BuildBooth({info, monitorState, videoPlayer}) {
 										position={_.position}
 										monitor={_.monitor}
 										poster={_.poster}
+										button={_.button}
 										key={index}
 								/>
 							}
@@ -31,6 +32,7 @@ function BuildBooth({info, monitorState, videoPlayer}) {
 										position={_.position}
 										monitor={_.monitor}
 										poster={_.poster}
+										button={_.button}
 										key={index}
 								/>
 							}

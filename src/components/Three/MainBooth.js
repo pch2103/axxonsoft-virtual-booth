@@ -4,6 +4,7 @@ import BuildMonitor from "../BuildMonitor";
 import BuildPoster from "../BuildPoster";
 import {TextureLoader} from 'three'
 import {useLoader} from "react-three-fiber";
+import BuildButtons from "../BuildButtons";
 
 export default function MainBooth(props) {
 	const group = useRef()
@@ -16,7 +17,7 @@ export default function MainBooth(props) {
 
 	const [mapOver, setMapOver] = useState(false)
 	const [mapClicked, setMapClicked] = useState(false)
-	const [mapSelected, setMapSelected] = useState(false)
+	//const [mapSelected, setMapSelected] = useState(false)
 
 	const MapOver = e => {
 		e.stopPropagation()
@@ -27,7 +28,7 @@ export default function MainBooth(props) {
 	const MapOut = e => {
 		e.stopPropagation()
 		setMapOver(false)
-		setMapSelected(false)
+		//setMapSelected(false)
 		document.body.style.cursor = "default"
 	}
 
@@ -40,11 +41,11 @@ export default function MainBooth(props) {
 		e.stopPropagation()
 
 		setMapClicked(false)
-		mapClicked && !mapSelected && setMapSelected(true)
+		//mapClicked && !mapSelected && setMapSelected(true)
 
-		if(mapClicked && mapSelected) {
+		if(mapClicked && mapOver) {
 			props.info.setInfoPic('/axxonsoft-map-2021.jpg')
-			setMapSelected(false)
+			//setMapSelected(false)
 		}
 	}
 
@@ -59,6 +60,7 @@ export default function MainBooth(props) {
 
 				<BuildMonitor {...props}/>
 				<BuildPoster {...props}/>
+				<BuildButtons {...props}/>
 
 				<mesh position={[0, 1.29, -0.43]}
 							onPointerOver={MapOver}
@@ -79,20 +81,20 @@ export default function MainBooth(props) {
 					<boxBufferGeometry attach="geometry" args={[1.9, 2.9, 0.8]}/>
 					<meshBasicMaterial attach="material" color="#fff"/>
 				</mesh>
-				{ !mapSelected &&
+				{ !mapOver &&
 				<mesh position={[0, 1.29, -0.45]}>
 					<boxBufferGeometry attach="geometry" args={[1.35, 1.35, 0.01]}/>
 					<meshStandardMaterial attach="material" map={enlargeTextureNormal} transparent alphaMap={enlargeAlphaTextureNormal}/>
 				</mesh>
 				}
-				{ mapSelected &&
+				{ mapOver &&
 				<mesh position={[0, 1.29, -0.45]}>
 					<boxBufferGeometry attach="geometry" args={[1.35, 1.35, 0.01]}/>
 						<meshStandardMaterial attach="material" map={enlargeTexture} transparent alphaMap={enlargeAlphaTexture}/>
 				</mesh>
 				}
 				<mesh geometry={nodes.Tube.geometry} position={[0, 1.28, -0.44]} rotation={[Math.PI / 2, 0, 0]}>
-					{(mapOver || mapSelected)
+					{(mapOver)
 							? <meshBasicMaterial attach="material" color="#03B2FF"/>
 							: <meshBasicMaterial attach="material" color="#fff"/>
 					}
