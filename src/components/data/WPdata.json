@@ -13,17 +13,17 @@
         "alphaMap": "button-1-alpha.png",
         "textureHover": "button-1-hover.png",
         "alphaMapHover": "button-1-alpha-hover.png",
-        "link": "https://axxonsoft.com/webinars/?utm_source=onair&utm_medium=banner&utm_campaign=onair#wbtopics"
+        "link": "https://axxonsoft.com/webinars?utm_source=onair&utm_medium=banner&utm_campaign=onair#personalized-demo"
       }
     ],
     "monitor": [
       {
         "screenId": "video wall",
-        "title": "Sessions-on-Demand",
+        "title": "Axxon Next Retail Pack",
         "position": [0, 1.40, 0.51],
         "size": [1.6, 0.9],
         "texture": "screen_main.jpg",
-        "link": " https://on-air.axxonsoft.com/?utm_source=onair&utm_medium=banner&utm_campaign=onair#sessions"
+        "link": "https://youtu.be/ImiEuyKAwOU"
       },
       {
         "screenId": "screen01",
